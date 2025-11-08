@@ -17,7 +17,6 @@ export default {
         <div class="flex text-left">
             <ul class="me-15">
             <li><RouterLink to="/">Inicio</RouterLink></li>
-            <li><RouterLink to="/tests">Tests</RouterLink></li>
             <li><RouterLink to="/planes">Planes</RouterLink></li>
             <li><RouterLink to="/about">Sobre Kälm</RouterLink></li>
             <li><RouterLink to="/contacto">Contacto</RouterLink></li>

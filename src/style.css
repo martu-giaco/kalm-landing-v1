@@ -68,8 +68,8 @@ h3, h4, h5, h6{
     font-family: 'Tropiline Normal';
 }
 
-button{
-    font-family: 'Tropiline SemiBold';
+a.header-btn{
+    font-family: 'Tropiline Normal';
     font-weight: lighter;
 }
 
@@ -81,9 +81,9 @@ button{
     top: 40px;
     display: flex;
     align-items: center;
-    gap: 9vw;
+    gap: 17vw;
     box-sizing: border-box;
-    padding: 1vw;
+    padding: 0.7vw 1vw;
     margin: 0 auto;
     border: none;
     border-radius: 99em;

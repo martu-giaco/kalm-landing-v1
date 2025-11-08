@@ -16,14 +16,6 @@
             <span class="hidden min-[1061px]:inline-block text-xs md:text-base">Inicio</span>
         </RouterLink>
 
-        <!-- Tests -->
-        <RouterLink
-            to="/tests"
-            class="flex flex-col md:flex-row items-center font-bold text-[#306067]"
-        >
-            <span class="hidden min-[1061px]:inline-block text-xs md:text-base">Tests</span>
-        </RouterLink>
-
         <!-- Planes -->
         <RouterLink
             to="/planes"
