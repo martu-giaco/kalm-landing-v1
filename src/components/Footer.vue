@@ -32,7 +32,7 @@ export default {
                 alt="Imagen decorativa" 
                 class="h-30 object-contain">
     </div>
-    <p class="text-center mt-10">Copyright &copy; 2025 - Kälm. Todos los derechos reservados. Buenos Aires, Argentina.</p>
+    <p class="text-center mt-10 text-white">Copyright &copy; 2025 - Kälm. Todos los derechos reservados. Buenos Aires, Argentina.</p>
         <slot />
     </footer>
 </template>

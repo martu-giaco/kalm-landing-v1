@@ -68,16 +68,20 @@ h3, h4, h5, h6{
     font-family: 'Tropiline Normal';
 }
 
-a.header-btn{
+a.boton-header{
     font-family: 'Tropiline Normal';
     font-weight: lighter;
 }
 
+main p{
+    color: #2A4043;
+}
+
+
 
 
 .navbar-style{
-    position: fixed;
-    z-index: 1;
+    position: absolute;
     top: 40px;
     display: flex;
     align-items: center;
@@ -89,7 +93,7 @@ a.header-btn{
     border-radius: 99em;
     font-size: var(--fz);
     background-color: color-mix(in srgb, var(--c-glass) 12%, transparent);
-    backdrop-filter: blur(8px) url(#switcher) saturate(var(--saturation));
+    backdrop-filter: blur(8px) url(.navbar-style) saturate(var(--saturation));
     -webkit-backdrop-filter: blur(8px) saturate(var(--saturation));
     box-shadow: inset 0 0 0 1px
         color-mix(

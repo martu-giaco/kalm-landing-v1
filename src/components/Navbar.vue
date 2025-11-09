@@ -1,5 +1,5 @@
 <template>
-    <nav class=" navbar-style fixed z-50 flex items-center justify-between">
+    <nav class="navbar-style z-50 flex items-center justify-between ">
         <!-- LOGO -->
         <div class="hidden min-[1061px]:flex items-center ml-5">
         <img src="../assets/imgs/logo-kalm.svg" alt="Logo Kälm" class="h-7">
