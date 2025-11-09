@@ -19,7 +19,7 @@ export default {
             <li><RouterLink to="/">Inicio</RouterLink></li>
             <li><RouterLink to="/planes">Planes</RouterLink></li>
             <li><RouterLink to="/about">Sobre Kälm</RouterLink></li>
-            <li><RouterLink to="/contacto">Contacto</RouterLink></li>
+            <li><RouterLink to="/contact">Contacto</RouterLink></li>
             </ul>
             <ul>
             <li><RouterLink to="/">Equipo Kälm</RouterLink></li>

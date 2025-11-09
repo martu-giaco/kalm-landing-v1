@@ -20,8 +20,8 @@ const sendMessage = () => {
 
 <template>
   <div class="flex flex-col gap-6 w-full max-w-3xl mx-auto">
-    <MainTitle>Contacto</MainTitle>
-    <SubTitle>Escríbenos tus dudas o sugerencias, estaremos encantados de ayudarte.</SubTitle>
+    <h1>Contacto</h1>
+    <h2>Escríbenos tus dudas o sugerencias, estaremos encantados de ayudarte.</h2>
 
     <div class="flex flex-col gap-4 mt-6">
       <input

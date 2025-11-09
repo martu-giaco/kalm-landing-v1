@@ -7,7 +7,7 @@
 <template>
   <div class="flex flex-col min-h-screen items-center">
     <Navbar />
-    <main class="flex grow w-full text-center justify-center flex-col">
+    <main class="flex grow w-full flex-col overflow-x-hidden">
       <RouterView />
     </main>
     <Footer />

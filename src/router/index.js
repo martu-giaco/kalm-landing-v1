@@ -7,7 +7,7 @@ import Plans from "../views/Plans.vue";
 const routes = [
   { path: "/", component: Home },
   { path: "/about", component: About },
-  { path: "/contacto", component: Contact },
+  { path: "/contact", component: Contact },
   { path: "/planes", component: Plans }
 ];
 
