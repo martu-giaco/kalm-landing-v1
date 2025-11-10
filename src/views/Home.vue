@@ -35,7 +35,7 @@
       </div>
   </section>
   
-  <section  class="my-30 container mx-auto text-center">
+  <section class="mt-30 container mx-auto text-center">
     <h2 class="text-4xl text-[#306067]">La rutina perfecta para vos <br>en tan solo 4 pasos...</h2>
     <img 
         src="../assets/imgs/pasos.png" 
@@ -45,14 +45,40 @@
       <img 
         src="../assets/imgs/blob1.png" 
         alt="Imagen deco"
-        class="deco1"
+        class="deco1 h-auto"
       >
   </section>
 
-  <section>
-    <p>F.A.Q</p>
-    <h2>¿Alguna Pregunta?</h2>
-    
+  <section class="mb-50 mt-20 container mx-auto text-center">
+    <span class="text-[#CCE2E5] mb-2">F.A.Q</span>
+    <h2 class="text-4xl text-[#306067] mb-8">¿Alguna Pregunta?</h2>
+    <div class="text-start">
+        <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-2">
+        <input type="radio" name="my-accordion-2" checked="checked" />
+        <h3 class="collapse-title text-2xl font-semibold text-[#306067]">¿Cómo empiezo a usar <i>Kälm</i>?</h3>
+        <p class="collapse-content text-md">Solo necesitás descargar la app y crear tu perfil. Una vez dentro, completás un test breve sobre tu tipo de piel, cabello y objetivos. A partir de eso, <i>Kälm</i> te diseña una rutina personalizada que podés modificar cuando quieras.</p>
+      </div>
+      <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-2">
+        <input type="radio" name="my-accordion-2" />
+        <h3 class="collapse-title text-2xl font-semibold text-[#306067]">¿La App es Gratuita?</h3>
+        <p class="collapse-content text-md">Sí, <i>Kälm</i> ofrece todas sus funcionalidades principales de forma gratuita, porque creemos que el bienestar y el autocuidado deben ser accesibles para todos.</p>
+      </div>
+      <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-2">
+        <input type="radio" name="my-accordion-2" />
+        <h3 class="collapse-title text-2xl font-semibold text-[#306067]">¿Qué Hacen con mis Datos?</h3>
+        <p class="collapse-content text-md">Priorizamos la transparencia y el respeto por tu información. Los datos que ingresás se usan solo para mejorar tu experiencia dentro de la app, y nunca se comparten con terceros.</p>
+      </div>
+      <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-2">
+        <input type="radio" name="my-accordion-2" />
+        <h3 class="collapse-title text-2xl font-semibold text-[#306067]">How do I update my profile information?</h3>
+        <p class="collapse-content text-md">Go to "My Account" settings and select "Edit Profile" to make changes.</p>
+      </div>
+    </div>
+    <img 
+        src="../assets/imgs/blob2.png" 
+        alt="Imagen deco"
+        class="deco2 h-auto"
+      >
   </section>
 
 </template>

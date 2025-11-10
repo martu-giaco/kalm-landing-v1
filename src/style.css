@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "daisyui";
 
 /*FONTS*/
 @font-face {
@@ -184,4 +185,10 @@ a.boton-header{
     z-index: -1;
     right: -42vw;
     top: 42vw;
+}
+.deco2{
+    position: absolute;
+    z-index: -1;
+    left: -49vw;
+    top: 102vw;
 }
