@@ -47,6 +47,7 @@ body {
     --c-bg: #e8e8e9;
     --glass-reflex-dark: 1;
     --glass-reflex-light: 1;
+    background-color: #E9E5E3;
 }
 h1{
     font-family: 'Tropiline Bold';
@@ -59,6 +60,7 @@ h3, h4, h5, h6{
 }
 main p{
     color: #2A4043;
+    
 }
 a.boton-header{
     font-family: 'Tropiline Normal';
