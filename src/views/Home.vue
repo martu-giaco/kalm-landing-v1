@@ -38,9 +38,9 @@
   <section class="mt-30 container mx-auto text-center">
     <h2 class="text-4xl text-[#306067]">La rutina perfecta para vos <br>en tan solo 4 pasos...</h2>
     <img 
-        src="../assets/imgs/pasos.png" 
+        src="../assets/imgs/pasos3.png" 
         alt="Imagen pasos" 
-        class="w-3xl h-auto mx-auto object-cover"
+        class="w-4xl mx-auto object-cover"
       >
       <img 
         src="../assets/imgs/blob1.png" 
@@ -70,8 +70,8 @@
       </div>
       <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-2">
         <input type="radio" name="my-accordion-2" />
-        <h3 class="collapse-title text-2xl font-semibold text-[#306067]">How do I update my profile information?</h3>
-        <p class="collapse-content text-md">Go to "My Account" settings and select "Edit Profile" to make changes.</p>
+        <h3 class="collapse-title text-2xl font-semibold text-[#306067]">¿Qué tipo de recomendaciones ofrece la app?</h3>
+        <p class="collapse-content text-md"><i>Kälm</i> te sugiere productos y hábitos personalizados según tus respuestas en el test y tus objetivos de cuidado. Las recomendaciones son transparentes y sin patrocinios ocultos, porque creemos en la confianza y la autenticidad.</p>
       </div>
     </div>
     <img 
