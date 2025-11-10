@@ -49,4 +49,10 @@
       >
   </section>
 
+  <section>
+    <p>F.A.Q</p>
+    <h2>¿Alguna Pregunta?</h2>
+    
+  </section>
+
 </template>
