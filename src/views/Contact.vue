@@ -21,7 +21,7 @@ const sendMessage = () => {
 <template>
   <div class="justify-center bg-no-repeat bg-cover w-full flex flex-col items-center bg-[url(assets/imgs/header-bg.png)] pt-60 pb-40 bg-gradiente">
     <h1 class="text-5xl text-[#306067]">Contacto</h1>
-    <h2 class="text-2xl text-[#37A0AF]">Escríbenos tus dudas o sugerencias, estaremos encantados de ayudarte.</h2>
+    <h2 class="text-2xl text-[#37A0AF]">Escribínos tus dudas o sugerencias</h2>
 
     <div class="container justify-center items-center">
       <div class="flex flex-col gap-4 mt-6 w-full px-20">

@@ -5,28 +5,24 @@
 @font-face {
     font-family: 'Tropiline Normal';
     src: url('/src/assets/fonts/tropiline/Tropiline-Regular.otf') format('opentype');
-    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Tropiline Bold';
     src: url('/src/assets/fonts/tropiline/Tropiline-Bold.otf') format('opentype');
-    font-weight: Bolder;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Tropiline SemiBold';
     src: url('/src/assets/fonts/tropiline/Tropiline-SemiBold.otf') format('opentype');
-    font-weight: lighter;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Tropiline LogoOnly';
     src: url('/src/assets/fonts/tropiline/Tropiline-BoldItalic.otf') format('opentype');
-    font-weight: bold;
     font-style: italic;
 }
 
@@ -47,7 +43,7 @@ body {
     --c-bg: #e8e8e9;
     --glass-reflex-dark: 1;
     --glass-reflex-light: 1;
-    background-color: #E9E5E3;
+    background-color: #ffffff;
 }
 h1{
     font-family: 'Tropiline Bold';

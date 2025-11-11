@@ -22,9 +22,9 @@ export default {
             <li><RouterLink to="/contact">Contacto</RouterLink></li>
             </ul>
             <ul>
-            <li><RouterLink to="/">Equipo Kälm</RouterLink></li>
-            <li><RouterLink to="/">Empleos</RouterLink></li>
-            <li><RouterLink to="/">Blog</RouterLink></li>
+            <li><RouterLink to="/equipo">Equipo Kälm</RouterLink></li>
+            <li><RouterLink to="/empleos">Empleos</RouterLink></li>
+            <li><RouterLink to="/blog">Blog</RouterLink></li>
             </ul>
         </div>
         <img 
