@@ -1,10 +1,10 @@
 <template>
     <nav class="navbar-style z-50 flex items-center justify-between ">
         <!-- LOGO -->
-        <div class="flex items-center ml-5">
+        <RouterLink to="/" class="flex items-center ml-5">
         <img src="../assets/imgs/logo-kalm.svg" alt="Logo Kälm" class="h-7">
         <p class="logo-text text-lg pt-1 ms-1">Kälm</p>
-        </div>
+        </RouterLink>
 
         <!-- ÍCONOS DE NAVEGACIÓN -->
         <div class="flex flex-1 items-center space-x-6 justify-between">
