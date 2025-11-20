@@ -21,7 +21,7 @@
             to="/planes"
             class="flex flex-col items-center font-bold text-[#306067]"
         >
-            <span class="inline-block text-xs md:text-base">Planes</span>
+            <span class="inline-block text-xs md:text-base">Premium</span>
         </RouterLink>
 
         <!-- Sobre -->
