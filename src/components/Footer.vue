@@ -24,7 +24,6 @@ export default {
                 </ul>
                 <ul>
                 <li><RouterLink to="/equipo">Equipo Kälm</RouterLink></li>
-                <li><RouterLink to="/empleos">Empleos</RouterLink></li>
                 <li><RouterLink to="/blog">Blog</RouterLink></li>
                 </ul>
             </div>

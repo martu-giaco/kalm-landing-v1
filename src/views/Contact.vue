@@ -30,18 +30,21 @@ const sendMessage = () => {
           <div class="flex flex-col w-full">
       <input
         v-model="name"
+        aria-label="Nombre"
         type="text"
         placeholder="Nombre"
         class="text-[#37A0AF] h-15 p-5 mt-5 border bg-white/40 backdrop-blur-lg rounded-xl glass focus:outline-none focus:ring-2 focus:ring-[#37A0AF]"
       />
       <input
         v-model="email"
+        aria-label="email"
         type="email"
         placeholder="Correo electrónico"
         class="text-[#37A0AF] h-15 p-5 mt-5 border bg-white/40 backdrop-blur-lg rounded-xl glass focus:outline-none focus:ring-2 focus:ring-[#37A0AF]"
       />
       <textarea
         v-model="message"
+        aria-label="mensaje"
         rows="5"
         placeholder="Mensaje"
         class="text-[#37A0AF] h-30 p-5 mt-5 border bg-white/40 backdrop-blur-lg rounded-xl glass focus:outline-none focus:ring-2 focus:ring-[#37A0AF]"
