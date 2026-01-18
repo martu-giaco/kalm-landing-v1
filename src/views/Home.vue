@@ -81,7 +81,7 @@
       >
   </section>
   
-  <section class="mx-20 mb-50">
+  <section class="mx-35 mb-50">
     <div class="bg-[url(assets/imgs/aaa.png)] justify-center bg-no-repeat bg-cover w-full text-center items-end pt-40 pb-40 rounded-2xl">
       <h2 class="text-4xl text-[#306067] mb-5 ml-90">¿Listo para comenzar tu viaje <br> de autocuidado?</h2>
       <a href="" class="text-xl px-20 py-3 pt-4 ml-90 bg-[#306067] text-white rounded-2xl shadow-md boton-header">Descargá la app</a>
