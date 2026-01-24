@@ -19,9 +19,10 @@ const plans = [
     id: 2,
     title: 'Kälm Premium',
     description: 'Ideal para quienes ya conocen su piel y buscan subir de nivel, con experiencia personalizada y sin anuncios.',
-    price: 'ARS $10,000 /mes',
+    price: 'ARS $7,000 /mes',
     features: [
       'Todo lo incluido en Kälm Free.',
+      'Productos ilimitados en rutinas.',
       'Diagnóstico a fondo de piel y cabello.',
       'Rutinas personalizables ilimitadas.',
       '‘Self-pack’ de bienvenida.'
