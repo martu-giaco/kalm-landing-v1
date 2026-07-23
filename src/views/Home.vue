@@ -1,41 +1,67 @@
 <template>
-  <section class="justify-center bg-no-repeat bg-cover w-full flex items-center bg-[url(assets/imgs/header-bg.png)] pt-40 pb-40 bg-gradiente">
+  <section class="justify-center bg-no-repeat bg-cover bg-center w-full flex items-center bg-[url(assets/imgs/header-bg.png)] pt-40 pb-40 bg-gradiente">
     <img src="../assets/imgs/header-img.png" alt="Banner Mockups">
     <div class="text-start ms-[-10vw]">
       <h1 class="text-5xl text-[#306067]">Una nueva forma de cuidarte.</h1>
       <h2 class="text-2xl w-80 text-[#37A0AF] mb-5">Descubrí tu rutina perfecta, sin prueba y error.</h2>
-      <a href="" class="text-xl px-20 py-3 pt-4 bg-[#306067] text-white rounded-2xl shadow-md boton-header">Hacer el test</a>
+      <button
+        type="button"
+        @click="openModal"
+        class="text-xl px-20 py-3 pt-4 bg-[#306067] text-white rounded-2xl shadow-md boton-header"
+      >
+        Hacer el test
+      </button>
     </div>
   </section>
 
-  <section class="my-30 flex flex-col container mx-auto text-center">
+  <div
+    v-if="showModal"
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm px-4"
+    @click.self="closeModal"
+  >
+    <div class="rounded-3xl border border-white/70 bg-white/70 backdrop-blur-xl shadow-2xl p-6 sm:p-8 max-w-md w-full text-center">
+      <h3 class="text-2xl text-[#306067] mb-3 font-semibold">Empezá tu experiencia en Kälm</h3>
+      <p class="text-base sm:text-lg text-[#2A4043] leading-relaxed">
+        Para realizar el test y recibir un análisis personalizado de tu piel y cabello, descargá la aplicación y comenzá tu camino hacia una rutina hecha para vos.
+      </p>
+      <button
+        type="button"
+        @click="closeModal"
+        class="mt-6 inline-block px-6 py-3 bg-[#306067] text-white rounded-2xl shadow-md"
+      >
+        Entendido
+      </button>
+    </div>
+  </div>
+
+  <section class="my-30 flex flex-col container mx-auto text-center px-4 sm:px-6 lg:px-8">
     <h2 class="text-4xl text-[#306067]">Descubrí tu próxima rutina.</h2>
     <p class="text-xl">Hace del autocuidado parte de tu día a día</p>
-      <div class="flex flex-wrap sm:flex-column md:flex-column w-full mx-auto items-stretch gap-10 mt-5 justify-center text-start">
-        <!-- Card 1 -->
-        <div class="flex flex-col items-start px-7 py-15 rounded-xl bg-[url(assets/imgs/header-bg.png)] bg-left shadow-md glass w-80">
-          <img src="../assets/imgs/self_care_icon.png" alt="Rutinas" class="w-12 h-12 mb-4 object-contain">
-          <h3 class="font-semibold text-xl mb-2 text-[#306067]">Creá rutinas personalizadas</h3>
-          <p class="text-md text-start">Armá tus rutings de skincare y haircare según lo que vos necesitás. Elegí los pasos, productos y frecuencia para que tu autocuidado sea realmente tuyo.</p>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="flex flex-col items-start px-7 py-15 rounded-xl bg-[url(assets/imgs/header-bg.png)] bg-left shadow-md glass w-80">
-          <img src="../assets/imgs/alarm_icon.png" alt="Recordatorios" class="w-12 h-12 mb-4 object-contain">
-          <h3 class="font-semibold text-xl mb-2 text-[#306067]">Programá recordatorios</h3>
-          <p class="text-md text-start">Configurá alertas diarias, semanales, mensuales o hasta anuales para mantener la constancia y que tu rutina se convierta en un nuevo hábito saludable.</p>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="flex flex-col items-start px-7 py-15 rounded-xl bg-[url(assets/imgs/header-bg.png)] bg-left shadow-md glass w-80">
-          <img src="../assets/imgs/groups_icon.png" alt="Comunidad" class="w-16 h-12 mb-4 object-contain">
-          <h3 class="font-semibold text-xl mb-2 text-[#306067]">Interactuá con nuestra comunidad</h3>
-          <p class="text-md text-start">Compartí tus experiencias, descubrí tips y conectá con otras personas en su propio camino de autocuidado.</p>
-        </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 mt-8 justify-items-center text-start">
+      <!-- Card 1 -->
+      <div class="flex flex-col items-start px-7 py-15 rounded-xl bg-[url(assets/imgs/header-bg.png)] bg-left shadow-md glass w-full max-w-[320px]">
+        <img src="../assets/imgs/self_care_icon.png" alt="Rutinas" class="w-12 h-12 mb-4 object-contain">
+        <h3 class="font-semibold text-xl mb-2 text-[#306067]">Creá rutinas personalizadas</h3>
+        <p class="text-md text-start">Armá tus rutings de skincare y haircare según lo que vos necesitás. Elegí los pasos, productos y frecuencia para que tu autocuidado sea realmente tuyo.</p>
       </div>
+
+      <!-- Card 2 -->
+      <div class="flex flex-col items-start px-7 py-15 rounded-xl bg-[url(assets/imgs/header-bg.png)] bg-left shadow-md glass w-full max-w-[320px]">
+        <img src="../assets/imgs/alarm_icon.png" alt="Recordatorios" class="w-12 h-12 mb-4 object-contain">
+        <h3 class="font-semibold text-xl mb-2 text-[#306067]">Programá recordatorios</h3>
+        <p class="text-md text-start">Configurá alertas diarias, semanales, mensuales o hasta anuales para mantener la constancia y que tu rutina se convierta en un nuevo hábito saludable.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex flex-col items-start px-7 py-15 rounded-xl bg-[url(assets/imgs/header-bg.png)] bg-left shadow-md glass w-full max-w-[320px]">
+        <img src="../assets/imgs/groups_icon.png" alt="Comunidad" class="w-16 h-12 mb-4 object-contain">
+        <h3 class="font-semibold text-xl mb-2 text-[#306067]">Interactuá con nuestra comunidad</h3>
+        <p class="text-md text-start">Compartí tus experiencias, descubrí tips y conectá con otras personas en su propio camino de autocuidado.</p>
+      </div>
+    </div>
   </section>
   
-  <section class="mt-30 container mx-auto text-center">
+  <section class="relative overflow-hidden mt-12 sm:mt-16 lg:mt-20 container mx-auto text-center">
     <h2 class="text-4xl text-[#306067]">La rutina perfecta para vos <br>en tan solo 4 pasos...</h2>
     <img 
         src="../assets/imgs/pasos3.png" 
@@ -49,36 +75,36 @@
       >
   </section>
 
-  <section class="mb-50 mt-20 container mx-auto text-center">
-    <span class="text-[#CCE2E5] mb-2">F.A.Q</span>
-    <h2 class="text-4xl text-[#306067] mb-8">¿Alguna Pregunta?</h2>
-    <div class="text-start">
-        <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-2">
+  <section class="relative overflow-hidden mb-20 sm:mb-24 lg:mb-28 mt-6 sm:mt-8 lg:mt-10 container mx-auto text-center px-4 sm:px-6 lg:px-8">
+    <span class="text-[#CCE2E5] mb-2 block">F.A.Q</span>
+    <h2 class="text-3xl sm:text-4xl text-[#306067] mb-6 sm:mb-8">¿Alguna Pregunta?</h2>
+    <div class="max-w-4xl mx-auto text-start">
+      <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-2">
         <input type="radio" name="my-accordion-2" checked="checked" />
-        <h3 class="collapse-title text-2xl font-semibold text-[#306067]">¿Cómo empiezo a usar <i>Kälm</i>?</h3>
-        <p class="collapse-content text-md">Solo necesitás descargar la app y crear tu perfil. Una vez dentro, completás un test breve sobre tu tipo de piel, cabello y objetivos. A partir de eso, <i>Kälm</i> te diseña una rutina personalizada que podés modificar cuando quieras.</p>
+        <h3 class="collapse-title text-xl sm:text-2xl font-semibold text-[#306067]">¿Cómo empiezo a usar <i>Kälm</i>?</h3>
+        <p class="collapse-content text-sm sm:text-md">Solo necesitás descargar la app y crear tu perfil. Una vez dentro, completás un test breve sobre tu tipo de piel, cabello y objetivos. A partir de eso, <i>Kälm</i> te diseña una rutina personalizada que podés modificar cuando quieras.</p>
       </div>
       <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-2">
         <input type="radio" name="my-accordion-2" />
-        <h3 class="collapse-title text-2xl font-semibold text-[#306067]">¿La App es Gratuita?</h3>
-        <p class="collapse-content text-md">Sí, <i>Kälm</i> ofrece todas sus funcionalidades principales de forma gratuita, porque creemos que el bienestar y el autocuidado deben ser accesibles para todos.</p>
+        <h3 class="collapse-title text-xl sm:text-2xl font-semibold text-[#306067]">¿La App es Gratuita?</h3>
+        <p class="collapse-content text-sm sm:text-md">Sí, <i>Kälm</i> ofrece todas sus funcionalidades principales de forma gratuita, porque creemos que el bienestar y el autocuidado deben ser accesibles para todos.</p>
       </div>
       <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-2">
         <input type="radio" name="my-accordion-2" />
-        <h3 class="collapse-title text-2xl font-semibold text-[#306067]">¿Qué Hacen con mis Datos?</h3>
-        <p class="collapse-content text-md">Priorizamos la transparencia y el respeto por tu información. Los datos que ingresás se usan solo para mejorar tu experiencia dentro de la app, y nunca se comparten con terceros.</p>
+        <h3 class="collapse-title text-xl sm:text-2xl font-semibold text-[#306067]">¿Qué Hacen con mis Datos?</h3>
+        <p class="collapse-content text-sm sm:text-md">Priorizamos la transparencia y el respeto por tu información. Los datos que ingresás se usan solo para mejorar tu experiencia dentro de la app, y nunca se comparten con terceros.</p>
       </div>
       <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-2">
         <input type="radio" name="my-accordion-2" />
-        <h3 class="collapse-title text-2xl font-semibold text-[#306067]">¿Qué tipo de recomendaciones ofrece la app?</h3>
-        <p class="collapse-content text-md"><i>Kälm</i> te sugiere productos y hábitos personalizados según tus respuestas en el test y tus objetivos de cuidado. Las recomendaciones son transparentes y sin patrocinios ocultos, porque creemos en la confianza y la autenticidad.</p>
+        <h3 class="collapse-title text-xl sm:text-2xl font-semibold text-[#306067]">¿Qué tipo de recomendaciones ofrece la app?</h3>
+        <p class="collapse-content text-sm sm:text-md"><i>Kälm</i> te sugiere productos y hábitos personalizados según tus respuestas en el test y tus objetivos de cuidado. Las recomendaciones son transparentes y sin patrocinios ocultos, porque creemos en la confianza y la autenticidad.</p>
       </div>
     </div>
     <img 
-        src="../assets/imgs/blob2.png" 
-        alt="Imagen deco"
-        class="deco2 h-auto"
-      >
+      src="../assets/imgs/blob2.png" 
+      alt="Imagen deco"
+      class="deco2 h-auto"
+    >
   </section>
   
   <section class="mx-35 mb-50">
@@ -90,3 +116,17 @@
   
 
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const showModal = ref(false)
+
+function openModal() {
+  showModal.value = true
+}
+
+function closeModal() {
+  showModal.value = false
+}
+</script>

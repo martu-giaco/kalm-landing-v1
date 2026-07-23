@@ -19,7 +19,7 @@ const sendMessage = () => {
 </script>
 
 <template>
-  <section class="justify-center bg-no-repeat bg-cover w-full items-center bg-[url(assets/imgs/header-bg.png)] pt-50 pb-60 bg-gradiente text-center">
+  <section class="justify-center bg-no-repeat bg-cover bg-center w-full items-center bg-[url(assets/imgs/header-bg.png)] pt-50 pb-60 bg-gradiente text-center">
 
     <div class="container flex flex-row justify-center items-center mx-auto">
       <img src="../assets/imgs/contacto-img.png" alt="imagen decorativa" class="w-xl h-auto object-contain me-20">

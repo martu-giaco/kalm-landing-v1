@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <section class="justify-center bg-no-repeat bg-cover w-full items-center bg-[url(assets/imgs/header-bg.png)] pt-50 pb-60 bg-gradiente">
+  <section class="justify-center bg-no-repeat bg-cover bg-center w-full items-center bg-[url(assets/imgs/header-bg.png)] pt-50 pb-60 bg-gradiente">
     <div class="container flex flex-row justify-center items-center mx-auto">
       <img src="../assets/imgs/about-kalm-smaller.png" alt="sobre Kälm" class="w-3xl h-auto object-contain me-20">
       <div>
