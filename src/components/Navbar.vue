@@ -2,7 +2,6 @@
   <nav
     class="navbar-style z-[60] absolute top-10 left-5 right-5 mx-auto flex items-center justify-between"
   >
-    <!-- LOGO -->
     <RouterLink to="/" class="flex items-center ml-2 sm:ml-4">
       <img
         src="../assets/imgs/logo-kalm.svg"
@@ -56,7 +55,6 @@
     </div>
   </nav>
 
-  <!-- MENÚ MOBILE (RÉPLICA EXACTA ESTILO APP) -->
   <Teleport to="body">
     <Transition name="fade">
       <div v-if="isMenuOpen" class="fixed inset-0 z-[9999] lg:hidden">
@@ -74,7 +72,6 @@
             class="absolute right-0 top-0 flex h-full w-[82%] max-w-[320px] flex-col justify-between rounded-l-[32px] bg-white shadow-2xl p-6 overflow-y-auto"
           >
             
-            <!-- PARTE SUPERIOR (HEADER DEL MENÚ) -->
             <div>
               <div class="flex items-start justify-between mb-2">
                 <!-- Badge superior -->
@@ -146,7 +143,7 @@
               </div>
             </div>
 
-            <!-- PARTE INFERIOR (BOTÓN DESCARGAR APP) -->
+            <!-- (BOTÓN DESCARGAR APP) -->
             <div class="pt-6 border-t border-gray-100">
               <a 
                 href="#" 
@@ -173,7 +170,6 @@ import { ref, watch } from "vue";
 
 const isMenuOpen = ref(false);
 
-// Bloquea el scroll del body cuando el menú desplegable está abierto
 watch(isMenuOpen, (val) => {
   if (val) {
     document.body.style.overflow = 'hidden';

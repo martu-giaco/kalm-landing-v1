@@ -11,7 +11,6 @@
     <div class="text-center md:text-start ms-0 w-full md:w-[50%] lg:w-[50%] xl:w-[45%] z-20 md:pl-8 lg:pl-14 xl:pl-20 flex flex-col items-center md:items-start">
       <h1 class="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl text-[#306067] leading-tight font-bold">Una nueva forma de cuidarte.</h1>
       
-      <!-- H2 Oculto en Mobile, visible desde md (Tablet) -->
       <h2 class="hidden md:block text-lg md:text-xl lg:text-xl xl:text-2xl w-full md:w-80 text-[#37A0AF] mb-5 md:mt-3 mx-auto md:mx-0 font-semibold">
         Descubrí tu rutina perfecta, sin prueba y error.
       </h2>
@@ -44,7 +43,6 @@
             ✕
           </button>
 
-          <!-- Logo SVG de Kälm -->
           <img 
             src="../assets/imgs/logo-kalm.svg" 
             alt="Kälm Logo" 
@@ -184,7 +182,6 @@ function closeModal() {
   showModal.value = false
 }
 
-// Deshabilita el scroll del body cuando el modal está activo
 watch(showModal, (val) => {
   if (val) {
     document.body.style.overflow = 'hidden'

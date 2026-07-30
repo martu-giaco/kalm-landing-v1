@@ -6,22 +6,18 @@
     
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center max-w-6xl">
       
-      <!-- Imagen tipo Banner en Mobile/Tablet, lado a lado en Desktop -->
       <img 
         src="../assets/imgs/about-kalm-smaller.png" 
         alt="sobre Kälm" 
         class="w-full max-w-2xl sm:max-w-3xl lg:w-1/2 lg:max-w-[500px] xl:max-w-[550px] h-auto object-contain mb-10 lg:mb-0 lg:me-12 xl:me-16 flex-shrink-0"
       >
       
-      <!-- Bloque de Texto acotado en mobile/tablet para evitar líneas muy largas -->
       <div class="w-full max-w-2xl lg:max-w-none mx-auto lg:mx-0 text-center lg:text-start text-[#2A4043] px-2 sm:px-6 lg:px-0">
         
-        <!-- Título principal -->
         <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#306067] mb-4 sm:mb-6">
           Sobre <i class="logo-text">Kälm</i>
         </h1>
 
-        <!-- Subtítulo general y párrafos -->
         <p class="mb-5 text-base sm:text-lg leading-relaxed">
           En el equipo de <i>Kälm</i> nos enfocamos en brindar apoyo y recursos para el bienestar integral de las personas de manera gratuita, promoviendo el amor propio, la paciencia y la autocompasión.
         </p>

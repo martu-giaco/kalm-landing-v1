@@ -9,7 +9,6 @@ const isSubmitting = ref(false);
 const feedbackMessage = ref('');
 const isError = ref(false);
 
-// Endpoint oficial de tu cuenta en Formspree
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xeeywjra';
 
 const sendMessage = async () => {
@@ -62,7 +61,6 @@ const sendMessage = async () => {
     
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-center max-w-6xl">
       
-      <!-- Imagen decorativa: Arriba en Mobile/Tablet, Costado en Desktop -->
       <img 
         src="../assets/imgs/contacto-img.png" 
         alt="Imagen decorativa" 
@@ -79,7 +77,7 @@ const sendMessage = async () => {
           Escribínos tus dudas o sugerencias
         </h2>
 
-        <!-- Formulario configurado con Formspree -->
+        <!-- Formulario con Formspree -->
         <form 
           action="https://formspree.io/f/xeeywjra" 
           method="POST" 
@@ -139,7 +137,6 @@ const sendMessage = async () => {
           </div>
         </form>
 
-        <!-- Pie de Formulario (Mail & Redes Sociales) -->
         <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-10 pt-6 border-t border-[#306067]/20">
           <div class="text-center sm:text-start">
             <h3 class="text-[#306067] font-bold text-sm uppercase tracking-wider">Email</h3>

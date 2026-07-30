@@ -17,7 +17,6 @@ const closeModals = () => {
   showPremiumModal.value = false;
 };
 
-// Evita el scroll del body cuando algún modal está abierto
 watch([showFreeModal, showPremiumModal], ([free, premium]) => {
   if (free || premium) {
     document.body.style.overflow = 'hidden';

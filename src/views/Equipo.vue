@@ -40,7 +40,6 @@ const integrantes = [
         :key="integrante.id" 
         class="glass border border-white/60 bg-white/40 backdrop-blur-md p-8 sm:p-10 lg:p-8 xl:p-12 rounded-3xl flex flex-col items-center text-center w-full max-w-lg lg:max-w-none shadow-lg hover:shadow-xl transition-all duration-300 justify-center min-h-[280px] sm:min-h-[320px]"
       >
-        <!-- Nombre en una sola línea -->
         <h3 class="text-2xl sm:text-3xl lg:text-2xl xl:text-3xl font-bold text-[#306067] mb-3 whitespace-nowrap tracking-tight">
           {{ integrante.name }}
         </h3>
