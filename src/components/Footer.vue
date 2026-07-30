@@ -1,43 +1,68 @@
-<script>
-export default {
-    name: 'Footer'
-}
+<script setup>
 </script>
 
 <template>
-    <footer
-        class="text-white w-full flex-col items-stretch pt-30 px-20 pb-10"
-        :style="{
-        backgroundColor: '#306067',
-        borderTopLeftRadius: '60px',
-        borderTopRightRadius: '60px'
-        }"
-    >
-    <div class="flex justify-between align-top">
-    <div>
-        <div class="flex text-left">
-                <ul class="me-15">
-                <li><RouterLink to="/">Inicio</RouterLink></li>
-                <li><RouterLink to="/planes">Planes</RouterLink></li>
-                <li><RouterLink to="/about">Sobre Kälm</RouterLink></li>
-                <li><RouterLink to="/contact">Contacto</RouterLink></li>
-                </ul>
-                <ul>
-                <li><RouterLink to="/equipo">Equipo Kälm</RouterLink></li>
-                <li><RouterLink to="/blog">Blog</RouterLink></li>
-                </ul>
-            </div>
-            <div class="flex items-start justify-between flex-col gap-10 mt-8">
-                <ul class="flex gap-3 h-5">
-                <li class="contents"><a href="https://www.instagram.com/kalm_oficial/"  target=”_blank” class="bg-[url(assets/imgs/insta-light.png)] bg-no-repeat bg-contain w-5" style="font-size: 0;">Instagram</a></li>
-                <li class="contents"><a href="https://www.instagram.com/kalm_oficial/"  target=”_blank” class="bg-[url(assets/imgs/tiktok-light.png)] bg-no-repeat bg-contain w-5" style="font-size: 0;">Tik Tok</a></li>
-                <li class="contents"><a href="https://www.instagram.com/kalm_oficial/"  target=”_blank” class="bg-[url(assets/imgs/pinterest-light.png)] bg-no-repeat bg-contain w-5" style="font-size: 0;">Pinterest</a></li>
-                </ul>
-            </div>
+  <footer
+    class="bg-[#306067] text-white w-full rounded-t-[35px] sm:rounded-t-[50px] lg:rounded-t-[60px] pt-10 sm:pt-16 lg:pt-24 pb-8 px-6 sm:px-12 lg:px-20 overflow-hidden"
+  >
+    <!-- Contenedor Principal: Navegación a la izquierda, Logo a la derecha -->
+    <div class="flex flex-row justify-between items-start gap-4 sm:gap-8 max-w-7xl mx-auto">
+      
+      <!-- Bloque Izquierdo: Enlaces (2 columnas) y Redes Sociales -->
+      <div class="flex flex-col">
+        
+        <!-- Enlaces de Navegación en 2 Columnas -->
+        <div class="flex flex-row text-left gap-8 sm:gap-12 lg:gap-16">
+          
+          <!-- Columna 1 -->
+          <ul class="space-y-1.5 sm:space-y-2 text-sm sm:text-base font-medium">
+            <li><RouterLink to="/" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Inicio</RouterLink></li>
+            <li><RouterLink to="/planes" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Planes</RouterLink></li>
+            <li><RouterLink to="/about" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Sobre Kälm</RouterLink></li>
+            <li><RouterLink to="/contact" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Contacto</RouterLink></li>
+          </ul>
+          
+          <!-- Columna 2 -->
+          <ul class="space-y-1.5 sm:space-y-2 text-sm sm:text-base font-medium">
+            <li><RouterLink to="/equipo" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">Equipo Kälm</RouterLink></li>
+          </ul>
+
+        </div>
+
+        <!-- Redes Sociales -->
+        <div class="mt-6 sm:mt-8">
+          <ul class="flex gap-4 items-center">
+            <li>
+              <a 
+                href="https://www.instagram.com/kalm_oficial/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="block bg-[url(assets/imgs/insta-light.png)] bg-no-repeat bg-contain bg-center w-5 h-5 transition-transform hover:scale-110"
+                title="Instagram"
+              >
+                <span class="sr-only">Instagram</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bloque Derecho: Logo Kälm -->
+      <img 
+        src="../assets/imgs/logo-kalm-light.svg" 
+        alt="Logo Kälm" 
+        class="h-14 sm:h-24 lg:h-28 w-auto object-contain shrink-0"
+      >
     </div>
-        <img src="../assets/imgs/logo-kalm-light.svg" alt="Imagen decorativa" class="h-30 object-contain">
+
+    <!-- Línea divisoria y Copyright -->
+    <div class="border-t border-white/20 mt-8 sm:mt-12 pt-6 max-w-7xl mx-auto">
+      <p class="text-center text-xs sm:text-sm opacity-80">
+        Copyright &copy; 2025 - Kälm. Todos los derechos reservados. Buenos Aires, Argentina.
+      </p>
     </div>
-    <p class="text-center mt-10 text-white">Copyright &copy; 2025 - Kälm. Todos los derechos reservados. Buenos Aires, Argentina.</p>
-        <slot />
-    </footer>
+
+    <slot />
+  </footer>
 </template>

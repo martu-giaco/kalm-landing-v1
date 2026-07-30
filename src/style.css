@@ -32,6 +32,10 @@
 }
 
 /*GENERAL*/
+html, body {
+    overflow-x: hidden; /* Previene el scroll horizontal global */
+}
+
 body {
     font-family: 'Mulish', sans-serif;
     font-weight: bolder;
@@ -45,6 +49,7 @@ body {
     --glass-reflex-light: 1;
     background-color: #ffffff;
 }
+
 h1{
     font-family: 'Tropiline Bold';
 }
@@ -56,12 +61,13 @@ h3, h4, h5, h6{
 }
 main p{
     color: #2A4043;
-    
 }
-a.boton-header{
+a.boton-header, button.boton-header{
     font-family: 'Tropiline Normal';
     font-weight: lighter;
 }
+
+/* NAVBAR STYLE */
 .navbar-style{
     position: absolute;
     top: 40px;
@@ -157,7 +163,10 @@ a.boton-header{
         padding: 0.85rem 0.85rem;
     }
 }
+
+/* GLASS EFFECT */
 .glass{
+    overflow: hidden;
     background-color: color-mix(in srgb, var(--c-glass) 12%, transparent);
     backdrop-filter: blur(8px) url(.navbar-style) saturate(var(--saturation));
     -webkit-backdrop-filter: blur(8px) saturate(var(--saturation));
@@ -208,9 +217,11 @@ a.boton-header{
     transition: background-color 400ms cubic-bezier(1, 0, 0.4, 1),
         box-shadow 400ms cubic-bezier(1, 0, 0.4, 1);
 }
+
 .bg-gradiente {
     -webkit-mask-image: -webkit-gradient(linear, center 85%, center bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
 }
+
 .deco1{
     position: absolute;
     z-index: -1;
@@ -218,15 +229,11 @@ a.boton-header{
     top: 42vw;
     pointer-events: none;
 }
+
 .deco2{
     position: absolute;
     z-index: -1;
     left: -49vw;
     top: 102vw;
     pointer-events: none;
-}
-
-.text-\[\#37A0AF\] {
-    color: #37A0AF;
-    font-size: xx-large;
 }

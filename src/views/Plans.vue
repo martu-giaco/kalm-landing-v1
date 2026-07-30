@@ -1,4 +1,30 @@
 <script setup>
+import { ref, watch } from 'vue';
+
+const showFreeModal = ref(false);
+const showPremiumModal = ref(false);
+
+const openFreeModal = () => {
+  showFreeModal.value = true;
+};
+
+const openPremiumModal = () => {
+  showPremiumModal.value = true;
+};
+
+const closeModals = () => {
+  showFreeModal.value = false;
+  showPremiumModal.value = false;
+};
+
+// Evita el scroll del body cuando algún modal está abierto
+watch([showFreeModal, showPremiumModal], ([free, premium]) => {
+  if (free || premium) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = '';
+  }
+});
 
 const plans = [
   {
@@ -31,54 +57,303 @@ const plans = [
     main: true
   }
 ];
+
+const premiumFeatures = [
+  {
+    title: 'Rutinas ilimitadas',
+    desc: 'Creá, activá y desactivá tantas rutinas como necesites sin perder tu historial.'
+  },
+  {
+    title: 'Más de 20 productos por rutina',
+    desc: 'Sumá todos los productos que usás, sin topes ni restricciones.'
+  },
+  {
+    title: 'Diagnóstico avanzado',
+    desc: 'Tests adicionales de piel y cabello, con seguimiento de tu evolución.'
+  },
+  {
+    title: 'Biblioteca de expertos',
+    desc: 'Cientos de artículos de dermatólogos, con información clara y actualizada.'
+  },
+  {
+    title: 'Pack de bienvenida',
+    desc: 'Productos exclusivos para nuevos suscriptores (solo residentes de Argentina).'
+  },
+  {
+    title: 'Activación inmediata',
+    desc: 'Empezás a usar todos los beneficios apenas confirmás el pago.'
+  }
+];
+
+const comparisonTable = [
+  { benefit: 'Rutinas activas', free: 'Hasta 2', premium: 'Ilimitadas' },
+  { benefit: 'Productos por rutina', free: 'Hasta 5', premium: '+20' },
+  { benefit: 'Diagnóstico', free: 'Test básico', premium: 'Avanzado + seguimiento' },
+  { benefit: 'Artículos de expertos', free: 'Acceso limitado', premium: 'Biblioteca completa' },
+  { benefit: 'Pack de bienvenida', free: '—', premium: 'Incluido' }
+];
 </script>
 
-
 <template>
-  <section class="flex flex-col items-center w-full justify-center bg-no-repeat bg-cover bg-center bg-[url(assets/imgs/header-bg.png)] pt-50 pb-60 bg-gradiente">
-    <h1 class="text-5xl text-[#306067]">Premium</h1>
-    <h2 class=" text-center text-2xl text-[#37A0AF] mb-5 ">Elegí entre las dos posibilidades que mas se adapten a tus necesidades.</h2>
+  <section class="flex flex-col items-center w-full justify-center bg-no-repeat bg-cover bg-center bg-[url(assets/imgs/header-bg.png)] pt-28 pb-20 sm:pt-36 sm:pb-28 lg:pt-40 lg:pb-36 bg-gradiente px-4 sm:px-6 lg:px-8 overflow-hidden">
+    
+    <!-- Encabezado -->
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#306067] text-center mb-3">
+      Premium
+    </h1>
+    <h2 class="text-center text-lg sm:text-xl lg:text-2xl text-[#37A0AF] mb-8 sm:mb-12 max-w-xl font-semibold">
+      Elegí entre las dos posibilidades que más se adapten a tus necesidades.
+    </h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 mt-3 items-stretch max-w-[900px] mx-auto">
-      <div v-for="plan in plans" :key="plan.id" :class="[
-        'py-4 rounded-2xl flex', // padding pequeño para que el gradiente sea borde
-        plan.main ? 'bg-linear-to-b from-[#37A0AF] to-[#CCE2E5] py-4 px-2' : 'glass'
-      ]">
-        <!-- Contenedor interno blanco -->
-        <div :class="['flex', 'flex-col', 'py-6', 'px-8', 'rounded-2xl', plan.main ? 'bg-white/80' : ' ', 'w-full', 'h-full']">
-          <h3 class="text-4xl font-bold text-[#306067] mb-2 text-center">{{ plan.title }}</h3>
-          <p class=" mb-4 text-start">{{ plan.description }}</p>
-          <span class="text-5xl font-extrabold font-size text-[#37A0AF] mb-4 text-center">{{ plan.price }}</span>
+    <!-- Grid de Planes -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 mt-3 items-stretch max-w-[1050px] w-full mx-auto justify-items-center">
+      
+      <div 
+        v-for="plan in plans" 
+        :key="plan.id" 
+        :class="[
+          'p-1.5 rounded-3xl flex w-full max-w-md lg:max-w-none transition-all duration-300',
+          plan.main 
+            ? 'bg-gradient-to-b from-[#37A0AF] to-[#CCE2E5] shadow-xl' 
+            : 'glass border border-white/60 shadow-md'
+        ]"
+      >
+        <div 
+          :class="[
+            'flex flex-col p-6 sm:p-8 lg:p-6 xl:p-8 rounded-[20px] w-full h-full',
+            plan.main ? 'bg-white' : 'bg-white/80'
+          ]"
+        >
+          <h3 class="text-3xl sm:text-4xl font-bold text-[#306067] mb-3 text-center">
+            {{ plan.title }}
+          </h3>
+          
+          <p class="text-sm sm:text-base text-[#2A4043] mb-6 text-center sm:text-start leading-relaxed min-h-[48px]">
+            {{ plan.description }}
+          </p>
+          
+          <div class="my-2 text-center overflow-x-auto">
+            <span class="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-extrabold text-[#37A0AF] tracking-tight whitespace-nowrap">
+              {{ plan.price }}
+            </span>
+          </div>
 
-
-          <p class="text-[#306067] text-lg font-bold text-start mt-2 mb-2">¿Qué incluye?</p>
-          <ul class="flex flex-col gap-2 text-[#2A4043] text-start mb-6">
-            <li v-for="(feature, i) in plan.features" :key="i" class="flex items-center gap-2">
-              <span class="precio text-[#37A0AF] font-bold">✔</span> {{ feature }}
+          <p class="text-[#306067] text-base sm:text-lg font-bold text-start mt-6 mb-3">
+            ¿Qué incluye?
+          </p>
+          
+          <ul class="flex flex-col gap-3 text-[#2A4043] text-start mb-8">
+            <li v-for="(feature, i) in plan.features" :key="i" class="flex items-start gap-2.5 text-sm sm:text-base">
+              <span class="text-[#37A0AF] font-bold text-base mt-0.5 flex-shrink-0">✔</span>
+              <span>{{ feature }}</span>
             </li>
           </ul>
 
-          <div class="mt-auto flex justify-center">
-            <a v-if="plan.main" href="" class="w-full text-center px-10 py-3 pt-4 bg-[#306067] text-white rounded-2xl shadow-xl boton-header">{{ plan.buttonText }}</a>
-            <a v-else-if="plan.id === 1" href="" class="w-full text-center px-10 py-3 pt-4 bg-[#CCE2E5] text-[#2A4043] rounded-2xl shadow-xl boton-header">{{ plan.buttonText }} </a>
-            <a v-else href="" class="w-full text-center px-10 py-3 pt-4 bg-[#37A0AF] text-white rounded-2xl shadow-xl boton-header">{{ plan.buttonText }} </a>
+          <div class="mt-auto flex justify-center w-full">
+            <button 
+              v-if="plan.main" 
+              @click="openPremiumModal"
+              type="button"
+              class="w-full text-center px-6 py-3.5 !bg-[#306067] hover:!bg-[#254b51] text-white font-semibold rounded-2xl shadow-md transition-all active:scale-95 ![background-image:none] cursor-pointer"
+            >
+              {{ plan.buttonText }}
+            </button>
+            <button 
+              v-else 
+              @click="openFreeModal"
+              type="button"
+              class="w-full text-center px-6 py-3.5 !bg-[#CCE2E5] hover:!bg-[#b8d7dc] text-[#2A4043] font-semibold rounded-2xl shadow-md transition-all active:scale-95 ![background-image:none] cursor-pointer"
+            >
+              {{ plan.buttonText }}
+            </button>
           </div>
+
         </div>
       </div>
+
     </div>
+
+    <Teleport to="body">
+      
+      <!-- MODAL 1: KÄLM FREE -->
+      <Transition name="fade">
+        <div v-if="showFreeModal" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 overflow-y-auto" @click.self="closeModals">
+          <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full relative shadow-2xl border border-white/80 text-center animate-scale-in my-auto">
+            
+            <!-- Botón Cerrar -->
+            <button @click="closeModals" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 flex items-center justify-center font-bold text-lg transition-colors cursor-pointer">
+              ✕
+            </button>
+
+            <img src="../assets/imgs/logo-kalm.svg" alt="Kälm Logo" class="h-12 w-auto mx-auto mb-4 object-contain"/>
+
+            <h3 class="text-2xl font-bold text-[#306067] mb-2">
+              ¡Empezá gratis hoy!
+            </h3>
+            
+            <p class="text-sm sm:text-base text-[#2A4043] mb-6 leading-relaxed">
+              Para disfrutar de la experiencia completa de <strong>Kälm Free</strong> y llevar el seguimiento de tus rutinas, descargá nuestra app oficial en tu celular.
+            </p>
+
+            <!-- Botones de Descarga -->
+            <div class="flex flex-col gap-3 w-full">
+              <a href="#" class="w-full py-3.5 px-6 bg-[#306067] hover:bg-[#254b51] text-white font-semibold rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-95">
+                <span></span> Descargar la App
+              </a>
+        
+            </div>
+
+          </div>
+        </div>
+      </Transition>
+
+      <!-- MODAL 2: KÄLM PREMIUM -->
+      <Transition name="fade">
+        <div 
+          v-if="showPremiumModal" 
+          class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm p-3 sm:p-6 overflow-y-auto"
+          @click.self="closeModals"
+        >
+          <div class="bg-[#F4F9FA] rounded-[32px] max-w-lg w-full max-h-[90vh] overflow-y-auto relative shadow-2xl border border-white/80 p-4 sm:p-6 animate-scale-in my-auto">
+            
+            <!-- Barra Superior tipo App -->
+            <div class="flex items-center justify-between bg-white/70 backdrop-blur-md px-4 py-2.5 rounded-full border border-white shadow-sm mb-6 sticky top-0 z-10">
+              <div class="flex items-center gap-2">
+                <span class="logo-text text-xl font-bold text-[#306067]">Kälm</span>
+              </div>
+              <button 
+                @click="closeModals" 
+                class="w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-[#306067] font-bold flex items-center justify-center text-sm transition-colors cursor-pointer"
+              >
+                ✕
+              </button>
+            </div>
+
+            <!-- Encabezado del Modal -->
+            <div class="text-center mb-6">
+              <span class="text-xs uppercase tracking-widest text-[#37A0AF] font-bold">
+                PLAN PREMIUM
+              </span>
+              <h2 class="text-3xl sm:text-4xl font-serif font-extrabold text-[#306067] mt-1 mb-2">
+                Tu cuidado sin límites
+              </h2>
+              <p class="text-sm text-[#2A4043]/80 leading-relaxed max-w-xs mx-auto font-medium">
+                Rutinas ilimitadas, diagnósticos más precisos y el respaldo de expertos.
+              </p>
+            </div>
+
+            <!-- Tarjeta Interna Principal -->
+            <div class="bg-white rounded-3xl p-5 sm:p-6 shadow-sm border border-[#E2EFEB] mb-6">
+              
+              <h3 class="text-xl sm:text-2xl font-serif font-bold text-[#306067] mb-0.5">
+                Kälm Premium
+              </h3>
+              <p class="text-xs sm:text-sm text-gray-500 mb-3">
+                Un solo plan. Todos los beneficios.
+              </p>
+
+              <div class="flex items-baseline gap-1 mb-5">
+                <span class="text-3xl sm:text-4xl font-extrabold text-[#2A4043]">
+                  ARS $7,000
+                </span>
+                <span class="text-gray-500 font-medium text-sm">/mes</span>
+              </div>
+
+              <hr class="border-gray-100 my-4" />
+
+              <!-- Lista Qué Incluye -->
+              <span class="text-xs font-bold uppercase tracking-wider text-[#37A0AF] block mb-4">
+                QUÉ INCLUYE
+              </span>
+
+              <div class="space-y-4">
+                <div v-for="(item, idx) in premiumFeatures" :key="idx" class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-md bg-[#EBF5F6] text-[#37A0AF] flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">
+                    ✓
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-[#2A4043]">
+                      {{ item.title }}
+                    </h4>
+                    <p class="text-xs text-gray-500 leading-relaxed mt-0.5">
+                      {{ item.desc }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tabla Comparativa: Free vs Premium -->
+              <div class="mt-8 pt-4 border-t border-gray-100">
+                <span class="text-xs font-bold uppercase tracking-wider text-[#37A0AF] block mb-3">
+                  FREE VS. PREMIUM
+                </span>
+
+                <div class="rounded-2xl border border-gray-100 overflow-hidden bg-[#F8FCFC]">
+                  <table class="w-full text-xs text-left">
+                    <thead class="bg-[#F0F7F7] text-[#306067] font-bold">
+                      <tr>
+                        <th class="p-3">BENEFICIO</th>
+                        <th class="p-3 text-center text-gray-500">FREE</th>
+                        <th class="p-3 text-center text-[#37A0AF]">PREMIUM</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 text-[#2A4043]">
+                      <tr v-for="(row, rIdx) in comparisonTable" :key="rIdx">
+                        <td class="p-3 font-medium">{{ row.benefit }}</td>
+                        <td class="p-3 text-center text-gray-400 font-normal">{{ row.free }}</td>
+                        <td class="p-3 text-center font-bold text-[#37A0AF]">{{ row.premium }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Garantías -->
+            <div class="flex flex-col items-center gap-3">
+              <div class="flex items-center justify-center gap-2 text-[11px] text-gray-500 font-medium">
+                <span>🔒 Pago seguro</span>
+                <span>•</span>
+                <span>⚡ Activación inmediata</span>
+                <span>•</span>
+                <span>Cancelás cuando quieras</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </Transition>
+
+    </Teleport>
+
   </section>
 </template>
 
-
 <style scoped>
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr !important;
+/* Transición suave para los modales */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
-/* Ajuste para que plan principal sea apenas más grande */
-.scale-105 {
-  transform: scale(1.05);
+.animate-scale-in {
+  animation: scaleIn 0.25s ease-out forwards;
 }
 </style>
