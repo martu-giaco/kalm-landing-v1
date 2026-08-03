@@ -23,7 +23,7 @@
             </li>
             <li>
               <RouterLink to="/about" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                Sobre <span class="font-tropiline">Kälm</span>
+                Sobre Kälm
               </RouterLink>
             </li>
             <li>
@@ -36,7 +36,7 @@
           <ul class="space-y-1.5 sm:space-y-2 text-sm sm:text-base font-medium">
             <li>
               <RouterLink to="/equipo" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                Equipo <span class="font-tropiline">Kälm</span>
+                Equipo Kälm
               </RouterLink>
             </li>
           </ul>
