@@ -152,11 +152,11 @@
       class="deco2 h-auto hidden lg:block"
     >
   </section>
-  
+
   <!-- CTA Section -->
-  <section class="mx-4 sm:mx-8 lg:mx-35 mb-20 lg:mb-40">
-    <div class="bg-[url(assets/imgs/aaa.png)] flex flex-col justify-center bg-no-repeat bg-cover bg-[position:80%_center] lg:bg-center w-full text-center items-center lg:items-end pt-24 pb-24 lg:pt-40 lg:pb-40 rounded-2xl px-6 lg:px-16 overflow-hidden">
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl text-[#306067] font-semibold mb-6 max-w-md lg:max-w-none text-center lg:text-right">
+  <section class="mx-4 sm:mx-8 min-[1294px]:mx-35 mb-20 min-[1294px]:mb-40">
+    <div class="bg-[url(assets/imgs/aaa.png)] flex flex-col justify-center bg-no-repeat bg-cover bg-[position:80%_center] min-[1294px]:bg-left w-full text-center items-center min-[1294px]:items-end pt-24 pb-24 min-[1294px]:pt-40 min-[1294px]:pb-40 rounded-2xl px-6 min-[1294px]:px-16 overflow-hidden">
+      <h2 class="text-2xl sm:text-3xl min-[1294px]:text-4xl text-[#306067] font-semibold mb-6 max-w-md min-[1294px]:max-w-none text-center min-[1294px]:text-right">
         ¿Listo para comenzar tu viaje <br class="hidden sm:block"> de autocuidado?
       </h2>
       <a 
