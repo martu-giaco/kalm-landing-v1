@@ -47,10 +47,11 @@ const plans = [
     price: 'ARS $7,000 /mes',
     features: [
       'Todo lo incluido en Kälm Free.',
-      'Productos ilimitados en rutinas.',
-      'Diagnóstico a fondo de piel y cabello.',
-      'Rutinas personalizables ilimitadas.',
-      '‘Self-pack’ de bienvenida.'
+      'Self-Pack de bienvenida.',
+      'Rutinas activas ilimitadas.',
+      '+5 productos por rutina.',
+      'Acceso completo a blogs exclusivos.',
+      'Reseñas en productos.'
     ],
     buttonText: 'Ver más',
     main: true
@@ -59,24 +60,24 @@ const plans = [
 
 const premiumFeatures = [
   {
+    title: 'Self-Pack de bienvenida',
+    desc: 'Productos exclusivos para nuevos suscriptores (solo residentes de Argentina).'
+  },
+  {
     title: 'Rutinas ilimitadas',
     desc: 'Creá, activá y desactivá tantas rutinas como necesites sin perder tu historial.'
   },
   {
-    title: 'Más de 20 productos por rutina',
-    desc: 'Sumá todos los productos que usás, sin topes ni restricciones.'
+    title: 'Más productos por rutina',
+    desc: 'Sumá hasta 5 productos adicionales a tus rutinas de cuidado.'
   },
   {
-    title: 'Diagnóstico avanzado',
-    desc: 'Tests adicionales de piel y cabello, con seguimiento de tu evolución.'
+    title: 'Blogs exclusivos',
+    desc: 'Acceso a la biblioteca completa con artículos redactados por expertos.'
   },
   {
-    title: 'Biblioteca de expertos',
-    desc: 'Cientos de artículos de dermatólogos, con información clara y actualizada.'
-  },
-  {
-    title: 'Pack de bienvenida',
-    desc: 'Productos exclusivos para nuevos suscriptores (solo residentes de Argentina).'
+    title: 'Reseñas en productos',
+    desc: 'Dejá tus opiniones y leé valoraciones de otros usuarios de la comunidad.'
   },
   {
     title: 'Activación inmediata',
@@ -85,11 +86,11 @@ const premiumFeatures = [
 ];
 
 const comparisonTable = [
+  { benefit: 'Self-Pack de bienvenida', free: '—', premium: 'Incluido' },
   { benefit: 'Rutinas activas', free: 'Hasta 2', premium: 'Ilimitadas' },
-  { benefit: 'Productos por rutina', free: 'Hasta 5', premium: '+20' },
-  { benefit: 'Diagnóstico', free: 'Test básico', premium: 'Avanzado + seguimiento' },
-  { benefit: 'Artículos de expertos', free: 'Acceso limitado', premium: 'Biblioteca completa' },
-  { benefit: 'Pack de bienvenida', free: '—', premium: 'Incluido' }
+  { benefit: 'Productos por rutina', free: 'Hasta 5', premium: '+5' },
+  { benefit: 'Blogs exclusivos', free: 'Acceso limitado', premium: 'Biblioteca completa' },
+  { benefit: 'Reseñas en productos', free: '—', premium: 'Incluido' }
 ];
 </script>
 
@@ -194,12 +195,11 @@ const comparisonTable = [
               Para disfrutar de la experiencia completa de <strong>Kälm Free</strong> y llevar el seguimiento de tus rutinas, descargá nuestra app oficial en tu celular.
             </p>
 
-            <!-- Botones de Descarga -->
+            <!-- Botón de Descarga -->
             <div class="flex flex-col gap-3 w-full">
               <a href="#" class="w-full py-3.5 px-6 bg-[#306067] hover:bg-[#254b51] text-white font-semibold rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-95">
-                <span></span> Descargar la App
+                Descargar la App
               </a>
-        
             </div>
 
           </div>
@@ -215,7 +215,6 @@ const comparisonTable = [
         >
           <div class="bg-[#F4F9FA] rounded-[32px] max-w-lg w-full max-h-[90vh] overflow-y-auto relative shadow-2xl border border-white/80 p-4 sm:p-6 animate-scale-in my-auto">
             
-            <!-- Barra Superior tipo App -->
             <div class="flex items-center justify-between bg-white/70 backdrop-blur-md px-4 py-2.5 rounded-full border border-white shadow-sm mb-6 sticky top-0 z-10">
               <div class="flex items-center gap-2">
                 <span class="logo-text text-xl font-bold text-[#306067]">Kälm</span>
@@ -228,7 +227,6 @@ const comparisonTable = [
               </button>
             </div>
 
-            <!-- Encabezado del Modal -->
             <div class="text-center mb-6">
               <span class="text-xs uppercase tracking-widest text-[#37A0AF] font-bold">
                 PLAN PREMIUM
@@ -241,7 +239,6 @@ const comparisonTable = [
               </p>
             </div>
 
-            <!-- Tarjeta Interna Principal -->
             <div class="bg-white rounded-3xl p-5 sm:p-6 shadow-sm border border-[#E2EFEB] mb-6">
               
               <h3 class="text-xl sm:text-2xl font-serif font-bold text-[#306067] mb-0.5">
@@ -260,7 +257,6 @@ const comparisonTable = [
 
               <hr class="border-gray-100 my-4" />
 
-              <!-- Lista Qué Incluye -->
               <span class="text-xs font-bold uppercase tracking-wider text-[#37A0AF] block mb-4">
                 QUÉ INCLUYE
               </span>
@@ -281,7 +277,6 @@ const comparisonTable = [
                 </div>
               </div>
 
-              <!-- Tabla Comparativa: Free vs Premium -->
               <div class="mt-8 pt-4 border-t border-gray-100">
                 <span class="text-xs font-bold uppercase tracking-wider text-[#37A0AF] block mb-3">
                   FREE VS. PREMIUM
@@ -309,7 +304,6 @@ const comparisonTable = [
 
             </div>
 
-            <!-- Garantías -->
             <div class="flex flex-col items-center gap-3">
               <div class="flex items-center justify-center gap-2 text-[11px] text-gray-500 font-medium">
                 <span>🔒 Pago seguro</span>
