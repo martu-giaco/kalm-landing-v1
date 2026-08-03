@@ -46,7 +46,7 @@ const plans = [
     description: 'Ideal para quienes ya conocen su piel y buscan subir de nivel, con experiencia personalizada y sin anuncios.',
     price: 'ARS $7,000 /mes',
     features: [
-      'Todo lo incluido en Kälm Free.',
+      'Todo lo incluido en <span class="font-tropiline">Kälm</span> Free.',
       'Self-Pack de bienvenida.',
       'Rutinas activas ilimitadas.',
       '+5 productos por rutina.',
@@ -97,7 +97,6 @@ const comparisonTable = [
 <template>
   <section class="flex flex-col items-center w-full justify-center bg-no-repeat bg-cover bg-center bg-[url(assets/imgs/header-bg.png)] pt-28 pb-20 sm:pt-36 sm:pb-28 lg:pt-40 lg:pb-36 bg-gradiente px-4 sm:px-6 lg:px-8 overflow-hidden">
     
-    <!-- Encabezado -->
     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#306067] text-center mb-3">
       Premium
     </h1>
@@ -125,7 +124,7 @@ const comparisonTable = [
           ]"
         >
           <h3 class="text-3xl sm:text-4xl font-bold text-[#306067] mb-3 text-center">
-            {{ plan.title }}
+            <span class="font-tropiline">Kälm</span> {{ plan.title.replace('Kälm', '').trim() }}
           </h3>
           
           <p class="text-sm sm:text-base text-[#2A4043] mb-6 text-center sm:text-start leading-relaxed min-h-[48px]">
@@ -145,7 +144,7 @@ const comparisonTable = [
           <ul class="flex flex-col gap-3 text-[#2A4043] text-start mb-8">
             <li v-for="(feature, i) in plan.features" :key="i" class="flex items-start gap-2.5 text-sm sm:text-base">
               <span class="text-[#37A0AF] font-bold text-base mt-0.5 flex-shrink-0">✔</span>
-              <span>{{ feature }}</span>
+              <span v-html="feature"></span>
             </li>
           </ul>
 
@@ -175,7 +174,7 @@ const comparisonTable = [
 
     <Teleport to="body">
       
-      <!-- MODAL 1: KÄLM FREE -->
+      <!-- MODAL: KÄLM FREE -->
       <Transition name="fade">
         <div v-if="showFreeModal" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 overflow-y-auto" @click.self="closeModals">
           <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full relative shadow-2xl border border-white/80 text-center animate-scale-in my-auto">
@@ -192,10 +191,9 @@ const comparisonTable = [
             </h3>
             
             <p class="text-sm sm:text-base text-[#2A4043] mb-6 leading-relaxed">
-              Para disfrutar de la experiencia completa de <strong>Kälm Free</strong> y llevar el seguimiento de tus rutinas, descargá nuestra app oficial en tu celular.
+              Para disfrutar de la experiencia completa de <strong><span class="font-tropiline">Kälm</span> Free</strong> y llevar el seguimiento de tus rutinas, descargá nuestra app oficial en tu celular.
             </p>
 
-            <!-- Botón de Descarga -->
             <div class="flex flex-col gap-3 w-full">
               <a href="https://www.xn--klm-qla.com/" class="w-full py-3.5 px-6 bg-[#306067] hover:bg-[#254b51] text-white font-semibold rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-95">
                 Descargar la App
@@ -206,7 +204,7 @@ const comparisonTable = [
         </div>
       </Transition>
 
-      <!-- MODAL 2: KÄLM PREMIUM -->
+      <!-- MODAL: KÄLM PREMIUM -->
       <Transition name="fade">
         <div 
           v-if="showPremiumModal" 
@@ -217,7 +215,7 @@ const comparisonTable = [
             
             <div class="flex items-center justify-between bg-white/70 backdrop-blur-md px-4 py-2.5 rounded-full border border-white shadow-sm mb-6 sticky top-0 z-10">
               <div class="flex items-center gap-2">
-                <span class="logo-text text-xl font-bold text-[#306067]">Kälm</span>
+                <span class="logo-text text-xl font-bold text-[#306067]"><span class="font-tropiline">Kälm</span></span>
               </div>
               <button 
                 @click="closeModals" 
@@ -242,7 +240,7 @@ const comparisonTable = [
             <div class="bg-white rounded-3xl p-5 sm:p-6 shadow-sm border border-[#E2EFEB] mb-6">
               
               <h3 class="text-xl sm:text-2xl font-serif font-bold text-[#306067] mb-0.5">
-                Kälm Premium
+                <span class="font-tropiline">Kälm</span> Premium
               </h3>
               <p class="text-xs sm:text-sm text-gray-500 mb-3">
                 Un solo plan. Todos los beneficios.
@@ -310,7 +308,7 @@ const comparisonTable = [
                 <span>•</span>
                 <span>⚡ Activación inmediata</span>
                 <span>•</span>
-                <span>Cancelás cuando quieras</span>
+                <span>💳 Cancelás cuando quieras</span>
               </div>
             </div>
 
@@ -324,6 +322,13 @@ const comparisonTable = [
 </template>
 
 <style scoped>
+/* Clase para la tipografía Tropiline Bold Italic */
+.font-tropiline {
+  font-family: 'Tropiline', serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
 /* Transición suave para los modales */
 .fade-enter-active,
 .fade-leave-active {
