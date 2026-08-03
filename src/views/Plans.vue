@@ -197,7 +197,7 @@ const comparisonTable = [
 
             <!-- Botón de Descarga -->
             <div class="flex flex-col gap-3 w-full">
-              <a href="#" class="w-full py-3.5 px-6 bg-[#306067] hover:bg-[#254b51] text-white font-semibold rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-95">
+              <a href="https://www.xn--klm-qla.com/" class="w-full py-3.5 px-6 bg-[#306067] hover:bg-[#254b51] text-white font-semibold rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-95">
                 Descargar la App
               </a>
             </div>

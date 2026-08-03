@@ -59,10 +59,14 @@
 
           <!-- Botones de Acción -->
           <div class="flex flex-col gap-3 w-full">
-            <a href="#" class="w-full py-3.5 px-6 bg-[#306067] hover:bg-[#254b51] text-white font-semibold rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-95">
-              <span></span> Descargar la App
+            <a 
+              href="https://www.xn--klm-qla.com/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="w-full py-3.5 px-6 bg-[#306067] hover:bg-[#254b51] text-white font-semibold rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-95"
+            >
+              Descargar la App
             </a>
-            
           </div>
 
         </div>
@@ -152,7 +156,7 @@
       class="deco2 h-auto hidden lg:block"
     >
   </section>
-
+  
   <!-- CTA Section -->
   <section class="mx-4 sm:mx-8 min-[1294px]:mx-35 mb-20 min-[1294px]:mb-40">
     <div class="bg-[url(assets/imgs/aaa.png)] flex flex-col justify-center bg-no-repeat bg-cover bg-[position:80%_center] min-[1294px]:bg-left w-full text-center items-center min-[1294px]:items-end pt-24 pb-24 min-[1294px]:pt-40 min-[1294px]:pb-40 rounded-2xl px-6 min-[1294px]:px-16 overflow-hidden">
@@ -160,7 +164,9 @@
         ¿Listo para comenzar tu viaje <br class="hidden sm:block"> de autocuidado?
       </h2>
       <a 
-        href="#" 
+        href="https://www.xn--klm-qla.com/" 
+        target="_blank" 
+        rel="noopener noreferrer"
         class="text-lg sm:text-xl px-10 sm:px-20 py-3 pt-4 bg-[#306067] text-white rounded-2xl shadow-md boton-header w-full sm:w-auto text-center inline-block transition-transform active:scale-95"
       >
         Descargá la app

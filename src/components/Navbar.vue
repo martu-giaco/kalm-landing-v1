@@ -34,7 +34,7 @@
     <div class="flex items-center gap-3 navbar-actions">
       <!-- Desktop -->
       <a 
-        href="#" 
+        href="https://www.xn--klm-qla.com/" 
         class="hidden lg:inline-flex items-center rounded-2xl bg-[#306067] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#244a4d]"
       >
         Descargar
