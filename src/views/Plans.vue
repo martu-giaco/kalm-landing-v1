@@ -104,7 +104,6 @@ const comparisonTable = [
       Elegí entre las dos posibilidades que más se adapten a tus necesidades.
     </h2>
 
-    <!-- Grid de Planes -->
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 mt-3 items-stretch max-w-[1050px] w-full mx-auto justify-items-center">
       
       <div 
@@ -179,7 +178,6 @@ const comparisonTable = [
         <div v-if="showFreeModal" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 overflow-y-auto" @click.self="closeModals">
           <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full relative shadow-2xl border border-white/80 text-center animate-scale-in my-auto">
             
-            <!-- Botón Cerrar -->
             <button @click="closeModals" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 flex items-center justify-center font-bold text-lg transition-colors cursor-pointer">
               ✕
             </button>

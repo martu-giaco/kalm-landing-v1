@@ -30,7 +30,6 @@
       </RouterLink>
     </div>
 
-    <!-- BOTONES DESKTOP & HAMBURGUESA MOBILE -->
     <div class="flex items-center gap-3 navbar-actions">
       <!-- Desktop -->
       <a 
@@ -59,13 +58,11 @@
     <Transition name="fade">
       <div v-if="isMenuOpen" class="fixed inset-0 z-[9999] lg:hidden">
         
-        <!-- Overlay oscuro -->
         <div 
           class="absolute inset-0 bg-black/40 backdrop-blur-sm transition-opacity" 
           @click="isMenuOpen = false"
         ></div>
 
-        <!-- PANEL DESLIZANTE -->
         <Transition name="slide">
           <aside 
             v-if="isMenuOpen" 
@@ -74,16 +71,13 @@
             
             <div>
               <div class="flex items-start justify-between mb-2">
-                <!-- Badge superior -->
                 <span class="inline-block px-3 py-1 rounded-full bg-[#EBF5F6] text-[#37A0AF] text-xs font-bold">
                   Kälm Web
                 </span>
 
-                <!-- Botón Cerrar 'X' -->
                 <button 
                   @click="isMenuOpen = false" 
-                  class="w-9 h-9 rounded-full bg-gray-50 hover:bg-gray-100 flex items-center justify-center text-gray-500 font-bold transition-colors cursor-pointer"
-                >
+                  class="w-9 h-9 rounded-full bg-gray-50 hover:bg-gray-100 flex items-center justify-center text-gray-500 font-bold transition-colors cursor-pointer">
                   ✕
                 </button>
               </div>
@@ -146,7 +140,7 @@
             <!-- (BOTÓN DESCARGAR APP) -->
             <div class="pt-6 border-t border-gray-100">
               <a 
-                href="#" 
+                href="https://www.xn--klm-qla.com/" 
                 @click="isMenuOpen = false"
                 class="flex w-full items-center justify-center gap-2 rounded-2xl bg-[#306067] py-3.5 px-4 font-bold text-white shadow-md hover:bg-[#254b51] transition-all active:scale-95"
               >

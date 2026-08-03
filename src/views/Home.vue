@@ -1,5 +1,4 @@
 <template>
-  <!-- Hero Section -->
   <section class="justify-center bg-no-repeat bg-cover bg-center w-full flex flex-col md:flex-row items-center bg-[url(assets/imgs/header-bg.png)] pt-28 pb-16 md:pt-32 lg:pt-40 md:pb-32 lg:pb-40 bg-gradiente px-4 md:px-8 lg:px-12 xl:px-0 overflow-hidden">
     
     <img 
@@ -25,7 +24,6 @@
     </div>
   </section>
 
-  <!-- Modal Teleportado -->
   <Teleport to="body">
     <Transition name="fade">
       <div 
@@ -35,7 +33,6 @@
       >
         <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full relative shadow-2xl border border-white/80 text-center animate-scale-in my-auto">
           
-          <!-- Botón Cerrar -->
           <button 
             @click="closeModal"
             class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 flex items-center justify-center font-bold text-lg transition-colors cursor-pointer"
@@ -50,14 +47,13 @@
           />
 
           <h3 class="text-2xl font-bold text-[#306067] mb-2">
-            Empezá tu experiencia en Kälm
+            Empezá tu experiencia en <span class="font-tropiline">Kälm</span>
           </h3>
           
           <p class="text-sm sm:text-base text-[#2A4043] mb-6 leading-relaxed">
             Para realizar el test y recibir un análisis personalizado de tu piel y cabello, descargá la aplicación y comenzá tu camino hacia una rutina hecha para vos.
           </p>
 
-          <!-- Botones de Acción -->
           <div class="flex flex-col gap-3 w-full">
             <a 
               href="https://www.xn--klm-qla.com/" 
@@ -127,14 +123,14 @@
       
       <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-1 sm:py-2">
         <input type="radio" name="my-accordion-2" checked="checked" />
-        <h3 class="collapse-title text-lg sm:text-xl md:text-2xl font-semibold text-[#306067] pr-8 sm:pr-10 leading-tight">¿Cómo empiezo a usar <i>Kälm</i>?</h3>
-        <p class="collapse-content text-sm sm:text-base text-[#2A4043] leading-relaxed">Solo necesitás descargar la app y crear tu perfil. Una vez dentro, completás un test breve sobre tu tipo de piel, cabello y objetivos. A partir de eso, <i>Kälm</i> te diseña una rutina personalizada que podés modificar cuando quieras.</p>
+        <h3 class="collapse-title text-lg sm:text-xl md:text-2xl font-semibold text-[#306067] pr-8 sm:pr-10 leading-tight">¿Cómo empiezo a usar <span class="font-tropiline">Kälm</span>?</h3>
+        <p class="collapse-content text-sm sm:text-base text-[#2A4043] leading-relaxed">Solo necesitás descargar la app y crear tu perfil. Una vez dentro, completás un test breve sobre tu tipo de piel, cabello y objetivos. A partir de eso, <span class="font-tropiline">Kälm</span> te diseña una rutina personalizada que podés modificar cuando quieras.</p>
       </div>
       
       <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-1 sm:py-2">
         <input type="radio" name="my-accordion-2" />
         <h3 class="collapse-title text-lg sm:text-xl md:text-2xl font-semibold text-[#306067] pr-8 sm:pr-10 leading-tight">¿La App es Gratuita?</h3>
-        <p class="collapse-content text-sm sm:text-base text-[#2A4043] leading-relaxed">Sí, <i>Kälm</i> ofrece todas sus funcionalidades principales de forma gratuita, porque creemos que el bienestar y el autocuidado deben ser accesibles para todos.</p>
+        <p class="collapse-content text-sm sm:text-base text-[#2A4043] leading-relaxed">Sí, <span class="font-tropiline">Kälm</span> ofrece todas sus funcionalidades principales de forma gratuita, porque creemos que el bienestar y el autocuidado deben ser accesibles para todos.</p>
       </div>
       
       <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-1 sm:py-2">
@@ -146,7 +142,7 @@
       <div class="collapse collapse-arrow rounded-xl glass border border-base-300 mb-3 bg-[url(assets/imgs/header-bg.png)] bg-left bg-no-repeat bg-cover py-1 sm:py-2">
         <input type="radio" name="my-accordion-2" />
         <h3 class="collapse-title text-lg sm:text-xl md:text-2xl font-semibold text-[#306067] pr-8 sm:pr-10 leading-tight">¿Qué tipo de recomendaciones ofrece la app?</h3>
-        <p class="collapse-content text-sm sm:text-base text-[#2A4043] leading-relaxed"><i>Kälm</i> te sugiere productos y hábitos personalizados según tus respuestas en el test y tus objetivos de cuidado. Las recomendaciones son transparentes y sin patrocinios ocultos, porque creemos en la confianza y la autenticidad.</p>
+        <p class="collapse-content text-sm sm:text-base text-[#2A4043] leading-relaxed"><span class="font-tropiline">Kälm</span> te sugiere productos y hábitos personalizados según tus respuestas en el test y tus objetivos de cuidado. Las recomendaciones son transparentes y sin patrocinios ocultos, porque creemos en la confianza y la autenticidad.</p>
       </div>
 
     </div>
@@ -198,6 +194,13 @@ watch(showModal, (val) => {
 </script>
 
 <style scoped>
+/* Clase para la tipografía Tropiline Bold Italic */
+.font-tropiline {
+  font-family: 'Tropiline', serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.25s ease;
