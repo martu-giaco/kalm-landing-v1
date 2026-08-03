@@ -3,8 +3,9 @@
 
 <template>
   <footer
-    class="relative z-20 mt-auto bg-[#306067] text-white w-full rounded-t-[35px] sm:rounded-t-[50px] lg:rounded-t-[60px] pt-10 sm:pt-16 lg:pt-24 pb-8 px-6 sm:px-12 lg:px-20 overflow-hidden shadow-2xl">
-    <div class="flex flex-row justify-between items-start gap-4 sm:gap-8 max-w-7xl mx-auto">
+    class="footer-gradient relative z-20 mt-auto text-white w-full rounded-t-[35px] sm:rounded-t-[50px] lg:rounded-t-[60px] pt-10 sm:pt-16 lg:pt-24 pb-8 px-6 sm:px-12 lg:px-20 overflow-hidden shadow-2xl"
+  >
+    <div class="flex flex-row justify-between items-start gap-4 sm:gap-8 max-w-7xl mx-auto relative z-10">
       
       <div class="flex flex-col">
         
@@ -22,7 +23,7 @@
             </li>
             <li>
               <RouterLink to="/about" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                Sobre Kälm
+                Sobre <span class="font-tropiline">Kälm</span>
               </RouterLink>
             </li>
             <li>
@@ -35,7 +36,7 @@
           <ul class="space-y-1.5 sm:space-y-2 text-sm sm:text-base font-medium">
             <li>
               <RouterLink to="/equipo" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                Equipo Kälm
+                Equipo <span class="font-tropiline">Kälm</span>
               </RouterLink>
             </li>
           </ul>
@@ -69,8 +70,8 @@
               >
                 <span class="sr-only">TikTok</span>
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
-                    </svg>
+                  <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                </svg>
               </a>
             </li>
 
@@ -101,12 +102,32 @@
       >
     </div>
 
-    <div class="border-t border-white/20 mt-8 sm:mt-12 pt-6 max-w-7xl mx-auto">
+    <div class="border-t border-white/20 mt-8 sm:mt-12 pt-6 max-w-7xl mx-auto relative z-10">
       <p class="text-center text-xs sm:text-sm opacity-80">
-        Copyright &copy; 2025 - Kälm. Todos los derechos reservados. Buenos Aires, Argentina.
+        Copyright &copy; 2025 - <span class="font-tropiline">Kälm</span>. Todos los derechos reservados. Buenos Aires, Argentina.
       </p>
     </div>
 
     <slot />
   </footer>
 </template>
+
+<style scoped>
+/* Tipografía Tropiline */
+.font-tropiline {
+  font-family: 'Tropiline', serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Gradiente abstracto MUCHO MÁS intenso */
+.footer-gradient {
+  background-color: #306067;
+  background-image: 
+    /* Aumentada opacidad a 0.5 y esparcido a 70% */
+    radial-gradient(circle at 85% 15%, #379fafb2 0%, transparent 70%),
+    /* Aumentada opacidad a 0.4 y esparcido a 60% */
+    radial-gradient(circle at 15% 85%, #379faf0c 0%, transparent 60%),
+    linear-gradient(135deg, #306067 0%, #24494f 50%, #1a3539 100%);
+}
+</style>
