@@ -18,7 +18,7 @@
       </RouterLink>
 
       <RouterLink to="/planes" class="flex items-center font-bold text-[#306067] hover:text-[#37A0AF] transition-colors">
-        <span class="text-base whitespace-nowrap">Premium</span>
+        <span class="text-base whitespace-nowrap">Planes</span>
       </RouterLink>
 
       <RouterLink to="/about" class="flex items-center font-bold text-[#306067] hover:text-[#37A0AF] transition-colors">

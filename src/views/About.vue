@@ -30,9 +30,9 @@
           Con la frescura de lo simple y la sinceridad de lo real, en <i>Kälm</i> te recordamos que el bienestar no es una meta, sino un viaje único, personal y esencial, y estamos acá para acompañarte en cada paso del camino.
         </p>
 
-        <h2 class="text-center lg:text-end text-[#306067] font-semibold text-xl sm:text-2xl mt-8 lg:mt-12">
+        <p class="text-center lg:text-end text-[#306067] font-semibold text-xl sm:text-2xl mt-8 lg:mt-12" style="font-family: 'Tropiline SemiBold';">
           -Equipo <i>Kälm</i>
-        </h2>
+        </p>
       </div>
 
     </div>

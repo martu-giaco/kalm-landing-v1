@@ -98,9 +98,9 @@ const comparisonTable = [
   <section class="flex flex-col items-center w-full justify-center bg-no-repeat bg-cover bg-center bg-[url(assets/imgs/header-bg.png)] pt-28 pb-20 sm:pt-36 sm:pb-28 lg:pt-40 lg:pb-36 bg-gradiente px-4 sm:px-6 lg:px-8 overflow-hidden">
     
     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#306067] text-center mb-3">
-      Premium
+      Nuestro Planes
     </h1>
-    <p class="text-center text-lg sm:text-xl lg:text-2xl text-[#37A0AF] mb-8 sm:mb-12 max-w-xl font-semibold">
+    <p class="text-center text-lg sm:text-xl lg:text-2xl text-[#37A0AF] mb-8 sm:mb-12 max-w-xl font-semibold" style="font-family: 'Tropiline SemiBold';">
       Elegí entre las dos posibilidades que más se adapten a tus necesidades.
     </p>
 
@@ -122,9 +122,9 @@ const comparisonTable = [
             plan.main ? 'bg-white' : 'bg-white/80'
           ]"
         >
-          <h3 class="text-3xl sm:text-4xl font-bold text-[#306067] mb-3 text-center">
+          <h2 class="text-3xl sm:text-4xl font-bold text-[#37A0AF] mb-3 text-center">
             <span class="font-tropiline">Kälm</span> {{ plan.title.replace('Kälm', '').trim() }}
-          </h3>
+          </h2>
           
           <p class="text-sm sm:text-base text-[#2A4043] mb-6 text-center sm:text-start leading-relaxed min-h-[48px]">
             {{ plan.description }}
