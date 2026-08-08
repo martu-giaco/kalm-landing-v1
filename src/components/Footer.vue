@@ -18,7 +18,7 @@
             </li>
             <li>
               <RouterLink to="/planes" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                Premium
+                Planes
               </RouterLink>
             </li>
             <li>

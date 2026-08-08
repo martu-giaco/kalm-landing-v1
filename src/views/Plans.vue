@@ -100,9 +100,9 @@ const comparisonTable = [
     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#306067] text-center mb-3">
       Premium
     </h1>
-    <h2 class="text-center text-lg sm:text-xl lg:text-2xl text-[#37A0AF] mb-8 sm:mb-12 max-w-xl font-semibold">
+    <p class="text-center text-lg sm:text-xl lg:text-2xl text-[#37A0AF] mb-8 sm:mb-12 max-w-xl font-semibold">
       Elegí entre las dos posibilidades que más se adapten a tus necesidades.
-    </h2>
+    </p>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 mt-3 items-stretch max-w-[1050px] w-full mx-auto justify-items-center">
       
