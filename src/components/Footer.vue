@@ -113,7 +113,7 @@
         <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-start md:justify-end mt-2 md:mt-0">
           <!-- Google Play -->
           <a 
-            href="https://play.google.com/store" 
+            href="http://www.w3.org/2000/svg" 
             target="_blank" 
             rel="noopener noreferrer"
             class="flex items-center justify-center gap-3 px-6 py-3.5 bg-white/10 hover:bg-white/20 border border-white/15 text-white rounded-2xl shadow-md transition-all active:scale-95 text-base font-semibold"
@@ -126,7 +126,7 @@
 
           <!-- App Store -->
           <a 
-            href="https://www.apple.com/app-store/" 
+            href="http://www.w3.org/2000/svg" 
             target="_blank" 
             rel="noopener noreferrer"
             class="flex items-center justify-center gap-3 px-6 py-3.5 bg-white/10 hover:bg-white/20 border border-white/15 text-white rounded-2xl shadow-md transition-all active:scale-95 text-base font-semibold"
