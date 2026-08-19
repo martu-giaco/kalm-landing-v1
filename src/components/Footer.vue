@@ -3,54 +3,59 @@
 
 <template>
   <footer
-    class="footer-gradient relative z-20 mt-auto text-white w-full rounded-t-[35px] sm:rounded-t-[50px] lg:rounded-t-[60px] pt-10 sm:pt-16 lg:pt-24 pb-8 px-6 sm:px-12 lg:px-20 overflow-hidden shadow-2xl"
+    class="footer-gradient relative z-20 mt-auto text-white w-full rounded-t-[35px] sm:rounded-t-[50px] lg:rounded-t-[60px] pt-10 sm:pt-16 lg:pt-20 pb-8 px-6 sm:px-12 lg:px-20 overflow-hidden shadow-2xl"
   >
-    <div class="flex flex-row justify-between items-start gap-4 sm:gap-8 max-w-7xl mx-auto relative z-10">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-stretch gap-8 sm:gap-12 max-w-7xl mx-auto relative z-10">
       
-      <div class="flex flex-col">
+      <!-- Columna Izquierda: Navegación y Redes -->
+      <div class="flex flex-col text-left">
         
-        <div class="flex flex-row text-left gap-8 sm:gap-12 lg:gap-16">
-          <ul class="space-y-1.5 sm:space-y-2 text-sm sm:text-base font-medium">
-            <li>
-              <RouterLink to="/" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                Inicio
-              </RouterLink>
-            </li>
-            <li>
-              <RouterLink to="/planes" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                Planes
-              </RouterLink>
-            </li>
-            <li>
-              <RouterLink to="/about" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                Sobre Kälm
-              </RouterLink>
-            </li>
-            <li>
-              <RouterLink to="/contact" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                Contacto
-              </RouterLink>
-            </li>
-          </ul>
-          
-          <ul class="space-y-1.5 sm:space-y-2 text-sm sm:text-base font-medium">
-            <li>
-              <RouterLink to="/equipo" class="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                Equipo Kälm
-              </RouterLink>
-            </li>
-          </ul>
-        </div>
+        <h3 class="hidden md:block text-lg md:text-xl lg:text-xl xl:text-2xl w-full md:w-80 mb-6 font-medium">
+          Navegación
+        </h3>
 
-        <div class="mt-6 sm:mt-8">
-          <ul class="flex gap-4 items-center">
-            
+        <ul class="space-y-2 text-sm sm:text-base font-medium">
+          <li>
+            <RouterLink to="/" class="opacity-90 hover:opacity-100 transition-opacity">
+              Inicio
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/planes" class="opacity-90 hover:opacity-100 transition-opacity">
+              Planes
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/about" class="opacity-90 hover:opacity-100 transition-opacity">
+              Sobre Kälm
+            </RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/contact" class="opacity-90 hover:opacity-100 transition-opacity">
+              Contacto
+            </RouterLink>
+          </li>
+        </ul>
+
+        <div class="border-t border-white/20 my-3 w-full max-w-[160px]"></div>
+
+        <ul class="text-sm sm:text-base font-medium">
+          <li>
+            <RouterLink to="/equipo" class="opacity-90 hover:opacity-100 transition-opacity text-white/90">
+              Equipo Kälm
+            </RouterLink>
+          </li>
+        </ul>
+
+        <!-- Redes sociales -->
+        <div class="mt-6">
+          <ul class="flex gap-3 items-center">
             <li>
               <a 
                 href="https://www.instagram.com/kalm_oficial/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="block text-white opacity-80 hover:opacity-100 transition-all hover:scale-110 p-1"
+                class="block text-white opacity-80 hover:opacity-100 transition-all hover:scale-110 p-2 rounded-xl bg-white/10 hover:bg-white/20"
                 title="Instagram"
               >
                 <span class="sr-only">Instagram</span>
@@ -65,7 +70,7 @@
                 href="https://www.tiktok.com/@kalm_off" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="block text-white opacity-80 hover:opacity-100 transition-all hover:scale-110 p-1"
+                class="block text-white opacity-80 hover:opacity-100 transition-all hover:scale-110 p-2 rounded-xl bg-white/10 hover:bg-white/20"
                 title="TikTok"
               >
                 <span class="sr-only">TikTok</span>
@@ -80,7 +85,7 @@
                 href="https://www.youtube.com/@kalm_oficial" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                class="block text-white opacity-80 hover:opacity-100 transition-all hover:scale-110 p-1"
+                class="block text-white opacity-80 hover:opacity-100 transition-all hover:scale-110 p-2 rounded-xl bg-white/10 hover:bg-white/20"
                 title="YouTube"
               >
                 <span class="sr-only">YouTube</span>
@@ -89,22 +94,58 @@
                 </svg>
               </a>
             </li>
-
           </ul>
         </div>
 
       </div>
 
-      <img 
-        src="../assets/imgs/logo-kalm-light.svg" 
-        alt="Logo Kälm" 
-        class="h-14 sm:h-24 lg:h-28 w-auto object-contain shrink-0"
-      >
+      <!-- Columna Derecha: Logo arriba (posicionado absoluto en mobile), Botones abajo -->
+      <div class="flex flex-col items-start md:items-end justify-between w-full md:w-auto gap-8 self-stretch">
+        
+        <!-- Logo en Esquina Superior Derecha -->
+        <img 
+          src="../assets/imgs/logo-kalm-light.svg" 
+          alt="Logo Kälm" 
+          class="absolute top-0 right-0 md:static h-12 sm:h-20 lg:h-24 w-auto object-contain shrink-0"
+        />
+
+        <!-- Botones de Descarga en Esquina Inferior -->
+        <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto justify-start md:justify-end mt-2 md:mt-0">
+          <!-- Google Play -->
+          <a 
+            href="https://play.google.com/store" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-3 px-6 py-3.5 bg-white/10 hover:bg-white/20 border border-white/15 text-white rounded-2xl shadow-md transition-all active:scale-95 text-base font-semibold"
+          >
+            <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.398.236-.75.609-.92zm11.605 11.613l2.844-2.844c.325-.325.325-.852 0-1.177l-2.844-2.844-2.107 2.107 2.107 2.758zm-3.52-3.52L3.89 2.103l11.411 9.804-3.607-2.003zm0 4.186l3.607-2.003L3.89 21.897l7.794-7.804z"/>
+            </svg>
+            Google Play
+          </a>
+
+          <!-- App Store -->
+          <a 
+            href="https://www.apple.com/app-store/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-3 px-6 py-3.5 bg-white/10 hover:bg-white/20 border border-white/15 text-white rounded-2xl shadow-md transition-all active:scale-95 text-base font-semibold"
+          >
+            <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24">
+              <path d="M18.71,19.5 C17.88,20.74 17,21.95 15.66,21.97 C14.32,22 13.89,21.18 12.37,21.18 C10.84,21.18 10.37,21.95 9.099,22 C7.788,22.05 6.8,20.68 5.96,19.47 C4.25,17 2.94,12.45 4.7,9.39 C5.57,7.87 7.13,6.91 8.82,6.88 C10.1,6.86 11.32,7.75 12.11,7.75 C12.89,7.75 14.37,6.68 15.92,6.84 C16.57,6.87 18.39,7.1 19.56,8.82 C19.47,8.88 17.39,10.1 17.41,12.63 C17.44,15.65 20.06,16.66 20.09,16.67 C20.06,16.74 19.67,18.11 18.71,19.5 Z M13,3.5 C13.73,2.67 14.94,2.04 15.94,2 C16.07,3.17 15.6,4.35 14.9,5.19 C14.21,6.04 13.07,6.7 11.95,6.61 C11.8,5.46 12.36,4.26 13,3.5 Z"/>
+            </svg>
+            App Store
+          </a>
+        </div>
+
+      </div>
+
     </div>
 
+    <!-- Copyright -->
     <div class="border-t border-white/20 mt-8 sm:mt-12 pt-6 max-w-7xl mx-auto relative z-10">
       <p class="text-center text-xs sm:text-sm opacity-80">
-        Copyright &copy; 2025 - <span class="font-tropiline">Kälm</span>. Todos los derechos reservados. Buenos Aires, Argentina.
+        Copyright &copy; 2026 - <span class="font-tropiline">Kälm</span>. Todos los derechos reservados. Buenos Aires, Argentina.
       </p>
     </div>
 
@@ -113,20 +154,16 @@
 </template>
 
 <style scoped>
-/* Tipografía Tropiline */
 .font-tropiline {
   font-family: 'Tropiline', serif;
   font-weight: 700;
   font-style: italic;
 }
 
-/* Gradiente abstracto MUCHO MÁS intenso */
 .footer-gradient {
   background-color: #306067;
   background-image: 
-    /* Aumentada opacidad a 0.5 y esparcido a 70% */
     radial-gradient(circle at 85% 15%, #379fafb2 0%, transparent 70%),
-    /* Aumentada opacidad a 0.4 y esparcido a 60% */
     radial-gradient(circle at 15% 85%, #379faf0c 0%, transparent 60%),
     linear-gradient(135deg, #306067 0%, #24494f 50%, #1a3539 100%);
 }

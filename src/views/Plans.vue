@@ -175,14 +175,26 @@ const comparisonTable = [
       
       <!-- MODAL: KÄLM FREE -->
       <Transition name="fade">
-        <div v-if="showFreeModal" class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 overflow-y-auto" @click.self="closeModals">
+        <div 
+          v-if="showFreeModal" 
+          class="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 overflow-y-auto"
+          @click.self="closeModals"
+        >
           <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full relative shadow-2xl border border-white/80 text-center animate-scale-in my-auto">
-            
-            <button @click="closeModals" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-gray-100 text-gray-500 hover:bg-gray-200 flex items-center justify-center font-bold text-lg transition-colors cursor-pointer">
+          
+            <button 
+               @click="closeModals" 
+              class="absolute top-4 right-4 sm:top-5 sm:right-5 w-9 h-9 rounded-xl bg-[#F0F5F6] hover:bg-[#E2EDEF] flex items-center justify-center text-[#306067] font-bold transition-colors cursor-pointer"
+              title="Cerrar"
+            >
               ✕
             </button>
 
-            <img src="../assets/imgs/logo-kalm.svg" alt="Kälm Logo" class="h-12 w-auto mx-auto mb-4 object-contain"/>
+            <img 
+              src="../assets/imgs/logo-kalm.svg" 
+              alt="Kälm Logo" 
+              class="h-12 w-auto mx-auto mb-4 object-contain"
+            />
 
             <h3 class="text-2xl font-bold text-[#306067] mb-2">
               ¡Empezá gratis hoy!
@@ -192,9 +204,30 @@ const comparisonTable = [
               Para disfrutar de la experiencia completa de <strong><span class="font-tropiline">Kälm</span> Free</strong> y llevar el seguimiento de tus rutinas, descargá nuestra app oficial en tu celular.
             </p>
 
-            <div class="flex flex-col gap-3 w-full">
-              <a href="https://www.xn--klm-qla.com/" class="w-full py-3.5 px-6 bg-[#306067] hover:bg-[#254b51] text-white font-semibold rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-95">
-                Descargar la App
+            <!-- Opciones de descarga -->
+            <div class="flex flex-col sm:flex-row gap-3 w-full justify-center">
+              <a 
+                href="https://xn--klm-qla.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex-1 py-3 px-4 bg-[#306067] hover:bg-[#254b51] text-white rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-95 text-sm font-semibold"
+              >
+                <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734c0-.398.236-.75.609-.92zm11.605 11.613l2.844-2.844c.325-.325.325-.852 0-1.177l-2.844-2.844-2.107 2.107 2.107 2.758zm-3.52-3.52L3.89 2.103l11.411 9.804-3.607-2.003zm0 4.186l3.607-2.003L3.89 21.897l7.794-7.804z"/>
+                </svg>
+                Google Play
+              </a>
+
+              <a 
+                href="https://xn--klm-qla.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="flex-1 py-3 px-4 bg-[#306067] hover:bg-[#254b51] text-white rounded-2xl shadow-md transition-all flex items-center justify-center gap-2 active:scale-95 text-sm font-semibold"
+              >
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M18.71,19.5 C17.88,20.74 17,21.95 15.66,21.97 C14.32,22 13.89,21.18 12.37,21.18 C10.84,21.18 10.37,21.95 9.099,22 C7.788,22.05 6.8,20.68 5.96,19.47 C4.25,17 2.94,12.45 4.7,9.39 C5.57,7.87 7.13,6.91 8.82,6.88 C10.1,6.86 11.32,7.75 12.11,7.75 C12.89,7.75 14.37,6.68 15.92,6.84 C16.57,6.87 18.39,7.1 19.56,8.82 C19.47,8.88 17.39,10.1 17.41,12.63 C17.44,15.65 20.06,16.66 20.09,16.67 C20.06,16.74 19.67,18.11 18.71,19.5 Z M13,3.5 C13.73,2.67 14.94,2.04 15.94,2 C16.07,3.17 15.6,4.35 14.9,5.19 C14.21,6.04 13.07,6.7 11.95,6.61 C11.8,5.46 12.36,4.26 13,3.5 Z"/>
+                </svg>
+                App Store
               </a>
             </div>
 
